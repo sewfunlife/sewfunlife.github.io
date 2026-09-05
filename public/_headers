@@ -1,0 +1,24 @@
+# Cloudflare Pages response headers for this Next.js static export.
+#
+# This file lives in public/, so Next's `output: "export"` copies it verbatim
+# into out/_headers, which Cloudflare Pages reads natively at deploy time —
+# no plugin required. (Netlify's equivalent config is in netlify.toml.)
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+
+# Project imagery rarely changes once published, so it's cached long and
+# hard. Note: filenames from scripts/optimize-images.mjs are NOT
+# content-hashed, so if you replace an image but keep its filename, visitors
+# may see the old version for up to a year. Give a replaced image a new
+# filename (e.g. bump its "nn") if you need the new one to show up
+# immediately everywhere.
+/work/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Next.js fingerprints every file under _next/static/, so these are also
+# safe to cache indefinitely.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable

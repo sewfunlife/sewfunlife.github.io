@@ -1,0 +1,56 @@
+# ---------------------------------------------------------------------------
+# Dependencies & build output
+# ---------------------------------------------------------------------------
+node_modules/
+.next/
+out/
+.turbo/
+build/
+coverage/
+*.tsbuildinfo
+next-env.d.ts
+
+# ---------------------------------------------------------------------------
+# PRIVATE CONTENT — deliberately never committed
+#
+# This template ships example copy in `content.example/` and example imagery in
+# `placeholders/`. On `npm run dev` and `npm run build`, scripts/seed.mjs copies
+# those into `content/` and `public/work/` when a file is missing.
+#
+# Your real words and your real artwork live in the ignored paths below, so they
+# stay on your machine and never reach a public repository.
+# ---------------------------------------------------------------------------
+
+# Real site copy, project data and the generated image manifest
+/content/
+
+# Real, full-resolution imagery served by the site
+/public/work/
+
+# Original unprocessed source files (raw exports, client decks, archives)
+/_source/
+
+# The plain-text document the content JSON was written from
+/website.txt
+
+# ---------------------------------------------------------------------------
+# Environment & host tooling
+# ---------------------------------------------------------------------------
+.env
+.env*.local
+.vercel
+.netlify
+.wrangler/
+
+# ---------------------------------------------------------------------------
+# OS / editor cruft
+# ---------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+*.pem
+npm-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.idea/
+.vscode/*
+!.vscode/extensions.json

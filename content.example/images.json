@@ -1,0 +1,1008 @@
+{
+  "carnival-of-rust": {
+    "mood": [
+      {
+        "src": "/work/carnival-of-rust/mood-01-the-mask.webp",
+        "w": 1026,
+        "h": 1533,
+        "key": "01-the-mask",
+        "label": "The Mask",
+        "dom": "#232421"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-02-abandoned-ride.webp",
+        "w": 1039,
+        "h": 1514,
+        "key": "02-abandoned-ride",
+        "label": "Abandoned Ride",
+        "dom": "#373735"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-03-empty-carousel.webp",
+        "w": 1038,
+        "h": 1515,
+        "key": "03-empty-carousel",
+        "label": "Empty Carousel",
+        "dom": "#1d1d1c"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-04-dark-entrance.webp",
+        "w": 1065,
+        "h": 1477,
+        "key": "04-dark-entrance",
+        "label": "Dark Entrance",
+        "dom": "#202222"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-05-double-exposure.webp",
+        "w": 1001,
+        "h": 1572,
+        "key": "05-double-exposure",
+        "label": "Double Exposure",
+        "dom": "#3c3b36"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-06-aged-surface.webp",
+        "w": 1009,
+        "h": 1558,
+        "key": "06-aged-surface",
+        "label": "Aged Surface",
+        "dom": "#2b2720"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-07-torn-ephemera.webp",
+        "w": 992,
+        "h": 1586,
+        "key": "07-torn-ephemera",
+        "label": "Torn Ephemera",
+        "dom": "#29231c"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-08-hall-of-mirrors.webp",
+        "w": 1022,
+        "h": 1538,
+        "key": "08-hall-of-mirrors",
+        "label": "Hall of Mirrors",
+        "dom": "#191a17"
+      },
+      {
+        "src": "/work/carnival-of-rust/mood-09-album-cover.webp",
+        "w": 1133,
+        "h": 1388,
+        "key": "09-album-cover",
+        "label": "Album Cover",
+        "dom": "#23221e"
+      }
+    ],
+    "app": [
+      {
+        "src": "/work/carnival-of-rust/app-01-spotify.webp",
+        "w": 795,
+        "h": 1600,
+        "key": "01-spotify",
+        "label": "Spotify",
+        "dom": "#1d1d1d"
+      },
+      {
+        "src": "/work/carnival-of-rust/app-02-vinyl-record.webp",
+        "w": 1436,
+        "h": 1095,
+        "key": "02-vinyl-record",
+        "label": "Vinyl Record",
+        "dom": "#2c2a26"
+      },
+      {
+        "src": "/work/carnival-of-rust/app-03-cd-case.webp",
+        "w": 1448,
+        "h": 1086,
+        "key": "03-cd-case",
+        "label": "CD Case",
+        "dom": "#2d2a27"
+      },
+      {
+        "src": "/work/carnival-of-rust/app-04-billboard.webp",
+        "w": 975,
+        "h": 1600,
+        "key": "04-billboard",
+        "label": "Billboard",
+        "dom": "#272726"
+      },
+      {
+        "src": "/work/carnival-of-rust/app-05-instagram-post.webp",
+        "w": 955,
+        "h": 1600,
+        "key": "05-instagram-post",
+        "label": "Instagram Post",
+        "dom": "#1c1d1d"
+      }
+    ],
+    "cover": [
+      {
+        "src": "/work/carnival-of-rust/cover-01-original-cover.webp",
+        "w": 1600,
+        "h": 1600,
+        "key": "01-original-cover",
+        "label": "Original Cover",
+        "dom": "#343332"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/carnival-of-rust/deck-01-applications.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "01-applications",
+        "label": "Applications",
+        "dom": "#a3a09b"
+      },
+      {
+        "src": "/work/carnival-of-rust/deck-02-mood-board.webp",
+        "w": 1600,
+        "h": 800,
+        "key": "02-mood-board",
+        "label": "Mood Board",
+        "dom": "#9a9996"
+      }
+    ]
+  },
+  "faded": {
+    "mood": [
+      {
+        "src": "/work/faded/mood-01-watercolor-portrait.webp",
+        "w": 840,
+        "h": 1600,
+        "key": "01-watercolor-portrait",
+        "label": "Watercolor Portrait",
+        "dom": "#b6aea3"
+      },
+      {
+        "src": "/work/faded/mood-02-dissolving-figure.webp",
+        "w": 1023,
+        "h": 1537,
+        "key": "02-dissolving-figure",
+        "label": "Dissolving Figure",
+        "dom": "#ada496"
+      },
+      {
+        "src": "/work/faded/mood-03-rained-city.webp",
+        "w": 1001,
+        "h": 1572,
+        "key": "03-rained-city",
+        "label": "Rained City",
+        "dom": "#6d746b"
+      },
+      {
+        "src": "/work/faded/mood-04-double-exposure.webp",
+        "w": 777,
+        "h": 1600,
+        "key": "04-double-exposure",
+        "label": "Double Exposure",
+        "dom": "#a1a09b"
+      },
+      {
+        "src": "/work/faded/mood-05-focus-on-detail.webp",
+        "w": 1016,
+        "h": 1548,
+        "key": "05-focus-on-detail",
+        "label": "Focus on Detail",
+        "dom": "#ada699"
+      },
+      {
+        "src": "/work/faded/mood-06-fluid-motion.webp",
+        "w": 934,
+        "h": 1600,
+        "key": "06-fluid-motion",
+        "label": "Fluid Motion",
+        "dom": "#b9b3a1"
+      },
+      {
+        "src": "/work/faded/mood-07-aged-texture.webp",
+        "w": 991,
+        "h": 1587,
+        "key": "07-aged-texture",
+        "label": "Aged Texture",
+        "dom": "#baac96"
+      },
+      {
+        "src": "/work/faded/mood-08-quiet-interior.webp",
+        "w": 1056,
+        "h": 1489,
+        "key": "08-quiet-interior",
+        "label": "Quiet Interior",
+        "dom": "#868376"
+      },
+      {
+        "src": "/work/faded/mood-09-album-cover.webp",
+        "w": 1209,
+        "h": 1301,
+        "key": "09-album-cover",
+        "label": "Album Cover",
+        "dom": "#b2a99e"
+      }
+    ],
+    "app": [
+      {
+        "src": "/work/faded/app-01-spotify.webp",
+        "w": 740,
+        "h": 1600,
+        "key": "01-spotify",
+        "label": "Spotify",
+        "dom": "#534d4b"
+      },
+      {
+        "src": "/work/faded/app-02-vinyl-record.webp",
+        "w": 1375,
+        "h": 1144,
+        "key": "02-vinyl-record",
+        "label": "Vinyl Record",
+        "dom": "#7e7670"
+      },
+      {
+        "src": "/work/faded/app-03-cd-case.webp",
+        "w": 1266,
+        "h": 1242,
+        "key": "03-cd-case",
+        "label": "CD Case",
+        "dom": "#74706e"
+      },
+      {
+        "src": "/work/faded/app-04-billboard.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "04-billboard",
+        "label": "Billboard",
+        "dom": "#868886"
+      },
+      {
+        "src": "/work/faded/app-05-instagram-post.webp",
+        "w": 867,
+        "h": 1600,
+        "key": "05-instagram-post",
+        "label": "Instagram Post",
+        "dom": "#403f40"
+      }
+    ],
+    "cover": [
+      {
+        "src": "/work/faded/cover-01-original-cover.webp",
+        "w": 1600,
+        "h": 1600,
+        "key": "01-original-cover",
+        "label": "Original Cover",
+        "dom": "#9e9b98"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/faded/deck-01-applications.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "01-applications",
+        "label": "Applications",
+        "dom": "#cbc8c4"
+      },
+      {
+        "src": "/work/faded/deck-02-mood-board.webp",
+        "w": 1600,
+        "h": 800,
+        "key": "02-mood-board",
+        "label": "Mood Board",
+        "dom": "#bebab3"
+      }
+    ]
+  },
+  "just-perfect": {
+    "mood": [
+      {
+        "src": "/work/just-perfect/mood-01-candlelit-portrait.webp",
+        "w": 1042,
+        "h": 1509,
+        "key": "01-candlelit-portrait",
+        "label": "Candlelit Portrait",
+        "dom": "#2b1b13"
+      },
+      {
+        "src": "/work/just-perfect/mood-02-almost-touching.webp",
+        "w": 1023,
+        "h": 1537,
+        "key": "02-almost-touching",
+        "label": "Almost Touching",
+        "dom": "#2f2018"
+      },
+      {
+        "src": "/work/just-perfect/mood-03-night-on-the-shore.webp",
+        "w": 1053,
+        "h": 1493,
+        "key": "03-night-on-the-shore",
+        "label": "Night on the Shore",
+        "dom": "#2a211b"
+      },
+      {
+        "src": "/work/just-perfect/mood-04-double-exposure.webp",
+        "w": 1045,
+        "h": 1505,
+        "key": "04-double-exposure",
+        "label": "Double Exposure",
+        "dom": "#2c2728"
+      },
+      {
+        "src": "/work/just-perfect/mood-05-focus-on-detail.webp",
+        "w": 963,
+        "h": 1600,
+        "key": "05-focus-on-detail",
+        "label": "Focus on Detail",
+        "dom": "#2a1a10"
+      },
+      {
+        "src": "/work/just-perfect/mood-06-lantern-glow.webp",
+        "w": 1023,
+        "h": 1537,
+        "key": "06-lantern-glow",
+        "label": "Lantern Glow",
+        "dom": "#3a281d"
+      },
+      {
+        "src": "/work/just-perfect/mood-07-dark-horizon.webp",
+        "w": 1054,
+        "h": 1492,
+        "key": "07-dark-horizon",
+        "label": "Dark Horizon",
+        "dom": "#241f1c"
+      },
+      {
+        "src": "/work/just-perfect/mood-08-soft-movement.webp",
+        "w": 949,
+        "h": 1600,
+        "key": "08-soft-movement",
+        "label": "Soft Movement",
+        "dom": "#3e200c"
+      },
+      {
+        "src": "/work/just-perfect/mood-09-album-cover.webp",
+        "w": 1163,
+        "h": 1352,
+        "key": "09-album-cover",
+        "label": "Album Cover",
+        "dom": "#221916"
+      }
+    ],
+    "app": [
+      {
+        "src": "/work/just-perfect/app-01-spotify.webp",
+        "w": 759,
+        "h": 1600,
+        "key": "01-spotify",
+        "label": "Spotify",
+        "dom": "#1e1c1a"
+      },
+      {
+        "src": "/work/just-perfect/app-02-vinyl-record.webp",
+        "w": 1412,
+        "h": 1114,
+        "key": "02-vinyl-record",
+        "label": "Vinyl Record",
+        "dom": "#1e1913"
+      },
+      {
+        "src": "/work/just-perfect/app-03-cd-case.webp",
+        "w": 1272,
+        "h": 1237,
+        "key": "03-cd-case",
+        "label": "CD Case",
+        "dom": "#231c17"
+      },
+      {
+        "src": "/work/just-perfect/app-04-billboard.webp",
+        "w": 1023,
+        "h": 1537,
+        "key": "04-billboard",
+        "label": "Billboard",
+        "dom": "#1c1d1c"
+      },
+      {
+        "src": "/work/just-perfect/app-05-instagram-post.webp",
+        "w": 902,
+        "h": 1600,
+        "key": "05-instagram-post",
+        "label": "Instagram Post",
+        "dom": "#120f0d"
+      }
+    ],
+    "cover": [
+      {
+        "src": "/work/just-perfect/cover-01-original-cover.webp",
+        "w": 1600,
+        "h": 1600,
+        "key": "01-original-cover",
+        "label": "Original Cover",
+        "dom": "#16120e"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/just-perfect/deck-01-applications.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "01-applications",
+        "label": "Applications",
+        "dom": "#a39f9a"
+      },
+      {
+        "src": "/work/just-perfect/deck-02-mood-board.webp",
+        "w": 1600,
+        "h": 800,
+        "key": "02-mood-board",
+        "label": "Mood Board",
+        "dom": "#9d958f"
+      }
+    ]
+  },
+  "sofia": {
+    "mood": [
+      {
+        "src": "/work/sofia/mood-01-expressive-portrait.webp",
+        "w": 800,
+        "h": 1600,
+        "key": "01-expressive-portrait",
+        "label": "Expressive Portrait",
+        "dom": "#7b6d74"
+      },
+      {
+        "src": "/work/sofia/mood-02-double-exposure.webp",
+        "w": 1196,
+        "h": 1315,
+        "key": "02-double-exposure",
+        "label": "Double Exposure",
+        "dom": "#867a83"
+      },
+      {
+        "src": "/work/sofia/mood-03-urban-energy.webp",
+        "w": 992,
+        "h": 1586,
+        "key": "03-urban-energy",
+        "label": "Urban Energy",
+        "dom": "#262e36"
+      },
+      {
+        "src": "/work/sofia/mood-04-line-and-texture.webp",
+        "w": 893,
+        "h": 1600,
+        "key": "04-line-and-texture",
+        "label": "Line and Texture",
+        "dom": "#aa5c67"
+      },
+      {
+        "src": "/work/sofia/mood-05-cinematic-window.webp",
+        "w": 831,
+        "h": 1600,
+        "key": "05-cinematic-window",
+        "label": "Cinematic Window",
+        "dom": "#1f5152"
+      },
+      {
+        "src": "/work/sofia/mood-06-focus-on-eyes.webp",
+        "w": 1600,
+        "h": 818,
+        "key": "06-focus-on-eyes",
+        "label": "Focus on Eyes",
+        "dom": "#a69894"
+      },
+      {
+        "src": "/work/sofia/mood-07-atmospheric-city.webp",
+        "w": 1600,
+        "h": 905,
+        "key": "07-atmospheric-city",
+        "label": "Atmospheric City",
+        "dom": "#754954"
+      },
+      {
+        "src": "/work/sofia/mood-08-urban-street.webp",
+        "w": 628,
+        "h": 1600,
+        "key": "08-urban-street",
+        "label": "Urban Street",
+        "dom": "#4d7177"
+      },
+      {
+        "src": "/work/sofia/mood-09-urban-portrait.webp",
+        "w": 1109,
+        "h": 1418,
+        "key": "09-urban-portrait",
+        "label": "Urban Portrait",
+        "dom": "#936f73"
+      },
+      {
+        "src": "/work/sofia/mood-10-cinematic-interior.webp",
+        "w": 832,
+        "h": 1600,
+        "key": "10-cinematic-interior",
+        "label": "Cinematic Interior",
+        "dom": "#552631"
+      }
+    ],
+    "app": [
+      {
+        "src": "/work/sofia/app-01-spotify.webp",
+        "w": 777,
+        "h": 1600,
+        "key": "01-spotify",
+        "label": "Spotify",
+        "dom": "#4a4346"
+      },
+      {
+        "src": "/work/sofia/app-02-apple-music.webp",
+        "w": 777,
+        "h": 1600,
+        "key": "02-apple-music",
+        "label": "Apple Music",
+        "dom": "#c0bdbe"
+      },
+      {
+        "src": "/work/sofia/app-03-vinyl-record.webp",
+        "w": 1396,
+        "h": 1127,
+        "key": "03-vinyl-record",
+        "label": "Vinyl Record",
+        "dom": "#646062"
+      },
+      {
+        "src": "/work/sofia/app-04-cd-case.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "04-cd-case",
+        "label": "CD Case",
+        "dom": "#8b8888"
+      },
+      {
+        "src": "/work/sofia/app-05-billboard.webp",
+        "w": 1402,
+        "h": 1122,
+        "key": "05-billboard",
+        "label": "Billboard",
+        "dom": "#82888c"
+      },
+      {
+        "src": "/work/sofia/app-06-instagram-post.webp",
+        "w": 973,
+        "h": 1600,
+        "key": "06-instagram-post",
+        "label": "Instagram Post",
+        "dom": "#beb8bc"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/sofia/deck-01-mood-board.webp",
+        "w": 1600,
+        "h": 800,
+        "key": "01-mood-board",
+        "label": "Mood Board",
+        "dom": "#bfbbbd"
+      },
+      {
+        "src": "/work/sofia/deck-02-presentations.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "02-presentations",
+        "label": "Presentations",
+        "dom": "#585657"
+      }
+    ]
+  },
+  "without-me": {
+    "mood": [
+      {
+        "src": "/work/without-me/mood-01-split-portrait.webp",
+        "w": 1037,
+        "h": 1517,
+        "key": "01-split-portrait",
+        "label": "Split Portrait",
+        "dom": "#1f121c"
+      },
+      {
+        "src": "/work/without-me/mood-02-curl-texture.webp",
+        "w": 996,
+        "h": 1579,
+        "key": "02-curl-texture",
+        "label": "Curl Texture",
+        "dom": "#131117"
+      },
+      {
+        "src": "/work/without-me/mood-03-colored-glass.webp",
+        "w": 1062,
+        "h": 1482,
+        "key": "03-colored-glass",
+        "label": "Colored Glass",
+        "dom": "#38203f"
+      },
+      {
+        "src": "/work/without-me/mood-04-neon-space.webp",
+        "w": 1046,
+        "h": 1503,
+        "key": "04-neon-space",
+        "label": "Neon Space",
+        "dom": "#1e1821"
+      },
+      {
+        "src": "/work/without-me/mood-05-double-exposure.webp",
+        "w": 1016,
+        "h": 1548,
+        "key": "05-double-exposure",
+        "label": "Double Exposure",
+        "dom": "#322341"
+      },
+      {
+        "src": "/work/without-me/mood-06-focus-on-detail.webp",
+        "w": 984,
+        "h": 1598,
+        "key": "06-focus-on-detail",
+        "label": "Focus on Detail",
+        "dom": "#2b2335"
+      },
+      {
+        "src": "/work/without-me/mood-07-chromatic-smoke.webp",
+        "w": 1023,
+        "h": 1537,
+        "key": "07-chromatic-smoke",
+        "label": "Chromatic Smoke",
+        "dom": "#221726"
+      },
+      {
+        "src": "/work/without-me/mood-08-iridescent-surface.webp",
+        "w": 907,
+        "h": 1600,
+        "key": "08-iridescent-surface",
+        "label": "Iridescent Surface",
+        "dom": "#2a2535"
+      },
+      {
+        "src": "/work/without-me/mood-09-album-cover.webp",
+        "w": 1091,
+        "h": 1442,
+        "key": "09-album-cover",
+        "label": "Album Cover",
+        "dom": "#1d1126"
+      }
+    ],
+    "app": [
+      {
+        "src": "/work/without-me/app-01-spotify.webp",
+        "w": 1024,
+        "h": 1536,
+        "key": "01-spotify",
+        "label": "Spotify",
+        "dom": "#17171f"
+      },
+      {
+        "src": "/work/without-me/app-02-vinyl-record.webp",
+        "w": 1363,
+        "h": 1154,
+        "key": "02-vinyl-record",
+        "label": "Vinyl Record",
+        "dom": "#2a2431"
+      },
+      {
+        "src": "/work/without-me/app-03-cd-case.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "03-cd-case",
+        "label": "CD Case",
+        "dom": "#251e29"
+      },
+      {
+        "src": "/work/without-me/app-04-billboard.webp",
+        "w": 907,
+        "h": 1600,
+        "key": "04-billboard",
+        "label": "Billboard",
+        "dom": "#171320"
+      },
+      {
+        "src": "/work/without-me/app-05-instagram-post.webp",
+        "w": 900,
+        "h": 1600,
+        "key": "05-instagram-post",
+        "label": "Instagram Post",
+        "dom": "#16121d"
+      }
+    ],
+    "cover": [
+      {
+        "src": "/work/without-me/cover-01-original-cover.webp",
+        "w": 1600,
+        "h": 1600,
+        "key": "01-original-cover",
+        "label": "Original Cover",
+        "dom": "#201329"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/without-me/deck-01-applications.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "01-applications",
+        "label": "Applications",
+        "dom": "#b1aba9"
+      },
+      {
+        "src": "/work/without-me/deck-02-mood-board.webp",
+        "w": 1600,
+        "h": 800,
+        "key": "02-mood-board",
+        "label": "Mood Board",
+        "dom": "#9a9397"
+      }
+    ]
+  },
+  "pizzeria": {
+    "mood": [
+      {
+        "src": "/work/pizzeria/mood-01-signature-pizza.webp",
+        "w": 1312,
+        "h": 1199,
+        "key": "01-signature-pizza",
+        "label": "Signature Pizza",
+        "dom": "#82562d"
+      },
+      {
+        "src": "/work/pizzeria/mood-02-melted-detail.webp",
+        "w": 1136,
+        "h": 1385,
+        "key": "02-melted-detail",
+        "label": "Melted Detail",
+        "dom": "#9b6437"
+      },
+      {
+        "src": "/work/pizzeria/mood-03-fresh-dough.webp",
+        "w": 1182,
+        "h": 1330,
+        "key": "03-fresh-dough",
+        "label": "Fresh Dough",
+        "dom": "#795f48"
+      },
+      {
+        "src": "/work/pizzeria/mood-04-burger-favorite.webp",
+        "w": 1271,
+        "h": 1237,
+        "key": "04-burger-favorite",
+        "label": "Burger Favorite",
+        "dom": "#613a17"
+      },
+      {
+        "src": "/work/pizzeria/mood-05-pasta-comfort.webp",
+        "w": 1495,
+        "h": 1052,
+        "key": "05-pasta-comfort",
+        "label": "Pasta Comfort",
+        "dom": "#5a4935"
+      },
+      {
+        "src": "/work/pizzeria/mood-06-fresh-salad.webp",
+        "w": 1600,
+        "h": 914,
+        "key": "06-fresh-salad",
+        "label": "Fresh Salad",
+        "dom": "#6f5336"
+      },
+      {
+        "src": "/work/pizzeria/mood-07-chalk-texture.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "07-chalk-texture",
+        "label": "Chalk Texture",
+        "dom": "#4f3219"
+      },
+      {
+        "src": "/work/pizzeria/mood-08-dining-atmosphere.webp",
+        "w": 1600,
+        "h": 686,
+        "key": "08-dining-atmosphere",
+        "label": "Dining Atmosphere",
+        "dom": "#4e2f18"
+      },
+      {
+        "src": "/work/pizzeria/mood-09-menu-design.webp",
+        "w": 1600,
+        "h": 699,
+        "key": "09-menu-design",
+        "label": "Menu Design",
+        "dom": "#513723"
+      }
+    ],
+    "app": [
+      {
+        "src": "/work/pizzeria/app-01-tabletop-menu.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "01-tabletop-menu",
+        "label": "Tabletop Menu",
+        "dom": "#664e3a"
+      },
+      {
+        "src": "/work/pizzeria/app-02-open-menu.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "02-open-menu",
+        "label": "Open Menu",
+        "dom": "#392a1a"
+      },
+      {
+        "src": "/work/pizzeria/app-03-design-detail.webp",
+        "w": 1397,
+        "h": 1126,
+        "key": "03-design-detail",
+        "label": "Design Detail",
+        "dom": "#513721"
+      },
+      {
+        "src": "/work/pizzeria/app-04-dining-setting.webp",
+        "w": 1466,
+        "h": 1073,
+        "key": "04-dining-setting",
+        "label": "Dining Setting",
+        "dom": "#3b2b1d"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/pizzeria/deck-01-mood-board.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "01-mood-board",
+        "label": "Mood Board",
+        "dom": "#8f806d"
+      },
+      {
+        "src": "/work/pizzeria/deck-02-menu-presentation.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "02-menu-presentation",
+        "label": "Menu Presentation",
+        "dom": "#695c4d"
+      }
+    ]
+  },
+  "real-estate": {
+    "app": [
+      {
+        "src": "/work/real-estate/app-01-main-kitchen.webp",
+        "w": 1600,
+        "h": 831,
+        "key": "01-main-kitchen",
+        "label": "Main Kitchen",
+        "dom": "#beb2a8"
+      },
+      {
+        "src": "/work/real-estate/app-01-main-living-room.webp",
+        "w": 1600,
+        "h": 832,
+        "key": "01-main-living-room",
+        "label": "Main Living Room",
+        "dom": "#a48c75"
+      },
+      {
+        "src": "/work/real-estate/app-02-open-plan-comfort.webp",
+        "w": 1600,
+        "h": 878,
+        "key": "02-open-plan-comfort",
+        "label": "Open Plan Comfort",
+        "dom": "#a58b71"
+      },
+      {
+        "src": "/work/real-estate/app-02-open-plan-living.webp",
+        "w": 1600,
+        "h": 869,
+        "key": "02-open-plan-living",
+        "label": "Open Plan Living",
+        "dom": "#a7a29c"
+      },
+      {
+        "src": "/work/real-estate/app-03-exterior-detail.webp",
+        "w": 1600,
+        "h": 857,
+        "key": "03-exterior-detail",
+        "label": "Exterior Detail",
+        "dom": "#6a6560"
+      },
+      {
+        "src": "/work/real-estate/app-03-light-filled-bedroom.webp",
+        "w": 1600,
+        "h": 865,
+        "key": "03-light-filled-bedroom",
+        "label": "Light Filled Bedroom",
+        "dom": "#a5927f"
+      },
+      {
+        "src": "/work/real-estate/app-04-indoor-outdoor-pool.webp",
+        "w": 1600,
+        "h": 863,
+        "key": "04-indoor-outdoor-pool",
+        "label": "Indoor Outdoor Pool",
+        "dom": "#816e58"
+      },
+      {
+        "src": "/work/real-estate/app-04-outdoor-patio.webp",
+        "w": 1600,
+        "h": 865,
+        "key": "04-outdoor-patio",
+        "label": "Outdoor Patio",
+        "dom": "#7a715e"
+      }
+    ],
+    "mood": [
+      {
+        "src": "/work/real-estate/mood-01-exterior-hero.webp",
+        "w": 1392,
+        "h": 1130,
+        "key": "01-exterior-hero",
+        "label": "Exterior Hero",
+        "dom": "#6c6d73"
+      },
+      {
+        "src": "/work/real-estate/mood-02-kitchen.webp",
+        "w": 1600,
+        "h": 786,
+        "key": "02-kitchen",
+        "label": "Kitchen",
+        "dom": "#c6b9ae"
+      },
+      {
+        "src": "/work/real-estate/mood-03-living-room.webp",
+        "w": 1600,
+        "h": 955,
+        "key": "03-living-room",
+        "label": "Living Room",
+        "dom": "#b3a79c"
+      },
+      {
+        "src": "/work/real-estate/mood-04-outdoor-patio.webp",
+        "w": 1600,
+        "h": 914,
+        "key": "04-outdoor-patio",
+        "label": "Outdoor Patio",
+        "dom": "#7e7464"
+      }
+    ],
+    "cover": [
+      {
+        "src": "/work/real-estate/cover-01-original-open-house.webp",
+        "w": 1280,
+        "h": 1600,
+        "key": "01-original-open-house",
+        "label": "Original Open House",
+        "dom": "#858583"
+      }
+    ],
+    "deck": [
+      {
+        "src": "/work/real-estate/deck-01-modern-living.webp",
+        "w": 1600,
+        "h": 900,
+        "key": "01-modern-living",
+        "label": "Modern Living",
+        "dom": "#b9aea4"
+      },
+      {
+        "src": "/work/real-estate/deck-02-open-house.webp",
+        "w": 1536,
+        "h": 1024,
+        "key": "02-open-house",
+        "label": "Open House",
+        "dom": "#8d8c8c"
+      }
+    ]
+  },
+  "wavbee": {
+    "cover": [
+      {
+        "src": "/work/wavbee/cover-01-campaign-visual.webp",
+        "w": 1280,
+        "h": 1600,
+        "key": "01-campaign-visual",
+        "label": "Campaign Visual",
+        "dom": "#623936"
+      }
+    ]
+  }
+}

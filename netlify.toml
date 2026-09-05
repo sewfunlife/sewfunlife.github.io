@@ -1,0 +1,41 @@
+# Netlify build configuration for this Next.js static export.
+#
+# next.config.ts sets `output: "export"`, so the build is plain static
+# HTML/CSS/JS/images written to `out/` — no Next.js runtime, no adapter or
+# plugin required.
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# ---------------------------------------------------------------------------
+# Headers
+# ---------------------------------------------------------------------------
+
+# Baseline security headers on every response.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "DENY"
+
+# Project imagery rarely changes once published, so it's cached long and hard.
+# Note: filenames from scripts/optimize-images.mjs are NOT content-hashed, so
+# if you replace an image but keep its filename, visitors may see the old
+# version for up to a year. Give a replaced image a new filename (e.g. bump
+# its "nn") if you need the new one to show up immediately everywhere.
+[[headers]]
+  for = "/work/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Next.js fingerprints every file under _next/static/, so these are also
+# safe to cache indefinitely.
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
