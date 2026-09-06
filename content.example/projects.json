@@ -1,275 +1,29 @@
 [
   {
-    "slug": "without-me",
-    "title": "Without Me",
-    "displayTitle": "WITHOUT ME",
-    "kind": "moodboard",
-    "discipline": "Music Identity",
-    "tagline": "Summarize this project's concept here in one confident line.",
-    "summary": "Write two or three sentences describing the concept behind this project — the imagery, colour treatment and mood you built the identity around, and what makes it feel distinctive.",
-    "keywords": ["Bold", "Independent", "Nocturnal", "Electric", "Intimate", "Modern"],
-    "palette": [
-      { "hex": "#D100FF" },
-      { "hex": "#7A1FFF" },
-      { "hex": "#00D48A" },
-      { "hex": "#0B1414" },
-      { "hex": "#6B6E76" },
-      { "hex": "#C7CDD3" },
-      { "hex": "#F2EFE8" }
-    ],
-    "typography": [
-      { "family": "Montserrat", "styles": ["Light", "Regular", "Medium"] },
-      { "family": "Cormorant Garamond", "styles": ["Regular", "Italic"] }
-    ],
-    "plates": [
-      { "key": "01-split-portrait", "title": "Split Portrait", "caption": "Add a short caption for the Split Portrait plate." },
-      { "key": "02-curl-texture", "title": "Curl Texture", "caption": "Add a short caption for the Curl Texture plate." },
-      { "key": "03-colored-glass", "title": "Colored Glass", "caption": "Add a short caption for the Colored Glass plate." },
-      { "key": "04-neon-space", "title": "Neon Space", "caption": "Add a short caption for the Neon Space plate." },
-      { "key": "05-double-exposure", "title": "Double Exposure", "caption": "Add a short caption for the Double Exposure plate." },
-      { "key": "06-focus-on-detail", "title": "Focus on Detail", "caption": "Add a short caption for the Focus on Detail plate." },
-      { "key": "07-chromatic-smoke", "title": "Chromatic Smoke", "caption": "Add a short caption for the Chromatic Smoke plate." },
-      { "key": "08-iridescent-surface", "title": "Iridescent Surface", "caption": "Add a short caption for the Iridescent Surface plate." },
-      { "key": "09-album-cover", "title": "Album Cover", "caption": "Add a short caption for the Album Cover plate." }
-    ],
-    "sections": [],
-    "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "faded",
-    "title": "Faded",
-    "displayTitle": "FADED",
-    "kind": "moodboard",
-    "discipline": "Music Identity",
-    "tagline": "Summarize this project's concept here in one short line.",
-    "summary": "Write two or three sentences describing the concept behind this project — the visual technique, imagery and atmosphere used, and the feeling the finished piece is meant to leave with the viewer.",
-    "keywords": ["Melancholic", "Atmospheric", "Fluid", "Intimate", "Cinematic", "Ethereal"],
-    "palette": [
-      { "hex": "#F16B6A" },
-      { "hex": "#E9A1A7" },
-      { "hex": "#F1B35A" },
-      { "hex": "#6EC7C6" },
-      { "hex": "#CFE7E6" },
-      { "hex": "#F5F2EC" }
-    ],
-    "typography": [
-      { "family": "Playfair Display", "styles": ["Bold"] },
-      { "family": "Montserrat", "styles": ["Light", "Regular", "Medium"] }
-    ],
-    "plates": [
-      { "key": "01-watercolor-portrait", "title": "Watercolor Portrait", "caption": "Add a short caption for the Watercolor Portrait plate." },
-      { "key": "02-dissolving-figure", "title": "Dissolving Figure", "caption": "Add a short caption for the Dissolving Figure plate." },
-      { "key": "03-rained-city", "title": "Rained City", "caption": "Add a short caption for the Rained City plate." },
-      { "key": "04-double-exposure", "title": "Double Exposure", "caption": "Add a short caption for the Double Exposure plate." },
-      { "key": "05-focus-on-detail", "title": "Focus on Detail", "caption": "Add a short caption for the Focus on Detail plate." },
-      { "key": "06-fluid-motion", "title": "Fluid Motion", "caption": "Add a short caption for the Fluid Motion plate." },
-      { "key": "07-aged-texture", "title": "Aged Texture", "caption": "Add a short caption for the Aged Texture plate." },
-      { "key": "08-quiet-interior", "title": "Quiet Interior", "caption": "Add a short caption for the Quiet Interior plate." },
-      { "key": "09-album-cover", "title": "Album Cover", "caption": "" }
-    ],
-    "sections": [],
-    "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "just-perfect",
-    "title": "Just Perfect",
-    "displayTitle": "JUST PERFECT",
-    "kind": "moodboard",
-    "discipline": "Music Identity",
-    "tagline": "Summarize this project's concept here in one short line.",
-    "summary": "Write two or three sentences describing the concept behind this project — the lighting, setting and imagery used, and the atmosphere the campaign is meant to create.",
-    "keywords": ["Intimate", "Romantic", "Nocturnal", "Warm", "Cinematic", "Tender"],
-    "palette": [
-      { "hex": "#0B0E10" },
-      { "hex": "#14292B" },
-      { "hex": "#1F3A3D" },
-      { "hex": "#C25A4A" },
-      { "hex": "#F0A77F" },
-      { "hex": "#EBD2B2" },
-      { "hex": "#F6F2E8" }
-    ],
-    "typography": [
-      { "family": "Playfair Display", "styles": ["Regular"] },
-      { "family": "Montserrat", "styles": ["Light", "Regular", "Medium"] }
-    ],
-    "plates": [
-      { "key": "01-candlelit-portrait", "title": "Candlelit Portrait", "caption": "Add a short caption for the Candlelit Portrait plate." },
-      { "key": "02-almost-touching", "title": "Almost Touching", "caption": "Add a short caption for the Almost Touching plate." },
-      { "key": "03-night-on-the-shore", "title": "Night on the Shore", "caption": "Add a short caption for the Night on the Shore plate." },
-      { "key": "04-double-exposure", "title": "Double Exposure", "caption": "Add a short caption for the Double Exposure plate." },
-      { "key": "05-focus-on-detail", "title": "Focus on Detail", "caption": "Add a short caption for the Focus on Detail plate." },
-      { "key": "06-lantern-glow", "title": "Lantern Glow", "caption": "Add a short caption for the Lantern Glow plate." },
-      { "key": "07-dark-horizon", "title": "Dark Horizon", "caption": "Add a short caption for the Dark Horizon plate." },
-      { "key": "08-soft-movement", "title": "Soft Movement", "caption": "Add a short caption for the Soft Movement plate." },
-      { "key": "09-album-cover", "title": "Album Cover", "caption": "Add a short caption for the Album Cover plate." }
-    ],
-    "sections": [],
-    "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "carnival-of-rust",
-    "title": "Carnival of Rust",
-    "displayTitle": "CARNIVAL OF RUST",
-    "kind": "moodboard",
-    "discipline": "Music Identity",
-    "tagline": "Summarize this project's concept here in one short line.",
-    "summary": "Write two or three sentences describing the concept behind this project — the setting, imagery and textures used, and the mood the finished visual world is meant to evoke.",
-    "keywords": ["Gothic", "Theatrical", "Weathered", "Mysterious", "Industrial", "Haunting"],
-    "palette": [
-      { "hex": "#0B0C0E" },
-      { "hex": "#2A2D2F" },
-      { "hex": "#384C43" },
-      { "hex": "#5A3A4C" },
-      { "hex": "#7A4B3A" },
-      { "hex": "#B1B1AE" },
-      { "hex": "#E7E3DD" }
-    ],
-    "typography": [
-      { "family": "Cormorant Garamond", "styles": ["Regular"] },
-      { "family": "Montserrat", "styles": ["Light", "Regular", "Medium"] }
-    ],
-    "plates": [
-      { "key": "01-the-mask", "title": "The Mask", "caption": "Add a short caption for the The Mask plate." },
-      { "key": "02-abandoned-ride", "title": "Abandoned Ride", "caption": "Add a short caption for the Abandoned Ride plate." },
-      { "key": "03-empty-carousel", "title": "Empty Carousel", "caption": "Add a short caption for the Empty Carousel plate." },
-      { "key": "04-dark-entrance", "title": "Dark Entrance", "caption": "Add a short caption for the Dark Entrance plate." },
-      { "key": "05-double-exposure", "title": "Double Exposure", "caption": "Add a short caption for the Double Exposure plate." },
-      { "key": "06-aged-surface", "title": "Aged Surface", "caption": "Add a short caption for the Aged Surface plate." },
-      { "key": "07-torn-ephemera", "title": "Torn Ephemera", "caption": "Add a short caption for the Torn Ephemera plate." },
-      { "key": "08-hall-of-mirrors", "title": "Hall of Mirrors", "caption": "Add a short caption for the Hall of Mirrors plate." },
-      { "key": "09-album-cover", "title": "Album Cover", "caption": "" }
-    ],
-    "sections": [],
-    "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "sofia",
-    "title": "Sofia",
-    "displayTitle": "SOFIA",
-    "kind": "moodboard",
-    "discipline": "Music Identity",
-    "tagline": "Summarize this project's concept here in one short line.",
-    "summary": "Write two or three sentences describing the concept behind this project — the central image, the palette and technique used to extend it, and the range of formats it needed to work across.",
-    "keywords": ["Bold", "Feminine", "Cinematic", "Mysterious", "Urban", "Elegant"],
-    "palette": [
-      { "hex": "#FF6B8A" },
-      { "hex": "#FFB6C1" },
-      { "hex": "#00D1C1" },
-      { "hex": "#0E0E10" },
-      { "hex": "#F4F4F6" }
-    ],
-    "typography": [
-      { "family": "Cinzel", "styles": ["Bold", "Elegant", "Timeless", "Strong"] },
-      { "family": "Montserrat", "styles": ["Clean", "Modern", "Versatile"] }
-    ],
-    "plates": [
-      { "key": "01-expressive-portrait", "title": "Expressive Portrait", "caption": "Add a short caption for the Expressive Portrait plate." },
-      { "key": "02-double-exposure", "title": "Double Exposure", "caption": "Add a short caption for the Double Exposure plate." },
-      { "key": "03-urban-energy", "title": "Urban Energy", "caption": "Add a short caption for the Urban Energy plate." },
-      { "key": "04-line-and-texture", "title": "Line & Texture", "caption": "Add a short caption for the Line & Texture plate." },
-      { "key": "05-cinematic-window", "title": "Cinematic Window", "caption": "Add a short caption for the Cinematic Window plate." },
-      { "key": "06-focus-on-eyes", "title": "Focus on Eyes", "caption": "" },
-      { "key": "07-atmospheric-city", "title": "Atmospheric City", "caption": "" },
-      { "key": "08-urban-street", "title": "Urban Street", "caption": "" },
-      { "key": "09-urban-portrait", "title": "Urban Portrait", "caption": "" },
-      { "key": "10-cinematic-interior", "title": "Cinematic Interior", "caption": "" }
-    ],
-    "sections": [],
-    "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "pizzeria",
-    "title": "Pizzeria Schnell Service",
-    "displayTitle": "PIZZERIA SCHNELL SERVICE",
+    "slug": "paracord-drink-carrier",
+    "title": "編織飲料提帶",
+    "displayTitle": "編織飲料提帶",
     "kind": "campaign",
-    "discipline": "Hospitality",
-    "tagline": "Summarize this project's concept here in one short line.",
-    "summary": "Write one or two sentences describing the concept behind this project — the tone and experience the menu design is meant to support.",
-    "keywords": ["Warm", "Energetic", "Welcoming", "Bold", "Rustic", "Vibrant"],
-    "palette": [
-      { "name": "Black", "hex": "#000000" },
-      { "name": "Yellow", "hex": "#EDDC08" },
-      { "name": "Red", "hex": "#CC200F" },
-      { "name": "Warm Cream", "hex": "#FAE3A3" },
-      { "name": "Olive Green", "hex": "#608139" },
-      { "name": "Brown", "hex": "#773C15" }
-    ],
-    "typography": [],
-    "plates": [
-      { "key": "01-signature-pizza", "title": "Signature Pizza", "caption": "" },
-      { "key": "02-melted-detail", "title": "Melted Detail", "caption": "" },
-      { "key": "03-fresh-dough", "title": "Fresh Dough", "caption": "" },
-      { "key": "04-burger-favorite", "title": "Burger Favorite", "caption": "" },
-      { "key": "05-pasta-comfort", "title": "Pasta Comfort", "caption": "" },
-      { "key": "06-fresh-salad", "title": "Fresh Salad", "caption": "" },
-      { "key": "07-chalk-texture", "title": "Chalk Texture", "caption": "" },
-      { "key": "08-dining-atmosphere", "title": "Dining Atmosphere", "caption": "" },
-      { "key": "09-menu-design", "title": "Menu Design", "caption": "" }
-    ],
-    "sections": [],
-    "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "real-estate",
-    "title": "Real Estate",
-    "displayTitle": "REAL ESTATE",
-    "kind": "campaign",
-    "discipline": "Property Campaign",
-    "tagline": "Summarize this project's concept here in one short line.",
-    "summary": "Write two or three sentences describing the concept behind this campaign — the editorial approach, the kind of imagery used, and the balance it strikes between an aspirational feel and clear, practical information.",
-    "keywords": ["Contemporary", "Refined", "Aspirational", "Premium", "Modern"],
+    "discipline": "手作課程",
+    "tagline": "傘繩飲料提帶手作課程，運用傘繩編織出實用的多功能飲料提帶，適合團體課程、社區活動與創意體驗。",
+    "summary": "傘繩飲料提帶是一款兼具實用性與成就感的手作課程。課程中會帶領學員認識傘繩材料與基礎編織方式，完成一條可實際使用的飲料提帶。課程適合社區活動、團體課程、市集體驗與親子活動，可依參與人數、年齡層、活動時間與場地條件調整教學節奏與材料配置。完成作品可用於手搖飲、瓶裝飲料或日常外出攜帶，成品實用、容易展示，也適合作為活動紀念作品。",
+    "keywords": [],
     "palette": [],
     "typography": [],
     "plates": [],
     "sections": [
-      { "heading": "Design Approach", "body": "Describe the design approach for this campaign here — the photography style, typography and colour choices that create the visual language, and how supporting content is organised to highlight the property's key benefits." },
-      { "heading": "Campaign Applications", "body": "List the formats this campaign was designed for — for example a poster, brochure, presentation and a call to action for viewings." },
-      { "heading": "Portfolio Result", "body": "Summarize the outcome of this campaign here — what it achieves for the viewer and why it works as a portfolio piece." },
-      { "heading": "Open-Plan Comfort", "body": "Describe this feature in a sentence — what it is and why it matters to the reader." },
-      { "heading": "Light-Filled Interiors", "body": "Describe this feature in a sentence — what it is and why it matters to the reader." },
-      { "heading": "Indoor-Outdoor Flow", "body": "Describe this feature in a sentence — what it is and why it matters to the reader." }
+      {
+        "heading": "適合對象",
+        "body": "社區課程／企業團體活動／市集 DIY 體驗／初學者與無手作經驗者／親子手作活動（８歲以下兒童需家長全程陪同完成）"
+      }
     ],
     "steps": [],
-    "facts": []
-  },
-  {
-    "slug": "wavbee",
-    "title": "Wavbee",
-    "displayTitle": "WAVBEE",
-    "kind": "campaign",
-    "discipline": "Platform Campaign",
-    "tagline": "Write a short, punchy tagline for this campaign here.",
-    "summary": "Write two or three sentences describing this platform campaign — what the product does, and the journey the campaign guide walks the reader through, from getting started to ongoing support.",
-    "keywords": ["Independent", "Global", "Energetic", "Transparent", "Bold"],
-    "palette": [],
-    "typography": [],
-    "plates": [],
-    "sections": [
-      { "heading": "Communication Challenge", "body": "Describe the communication challenge this campaign solved — what made the subject complicated for a first-time reader, and how the content was organised (headlines, short explanations, numbered stages, key statistics) to make it easy to follow." },
-      { "heading": "Design Direction", "body": "Describe the design direction here — the colours, imagery and typography that make up the visual system, and how they balance energy with clarity." },
-      { "heading": "Artist Support", "body": "List the ongoing support or services this platform offers here, as a short comma-separated line." }
-    ],
-    "steps": [
-      { "n": "01", "title": "Apply Online", "body": "Describe step one in a short sentence." },
-      { "n": "02", "title": "Get Verified", "body": "Describe step two in a short sentence." },
-      { "n": "03", "title": "Upload & Schedule", "body": "Describe step three in a short sentence." },
-      { "n": "04", "title": "Release & Earn", "body": "Describe step four in a short sentence." }
-    ],
     "facts": [
-      "100+ stores",
-      "One upload",
-      "Worldwide reach",
-      "Unlimited catalog",
-      "Full ownership retained",
-      "Flexible royalty split",
-      "Regular analytics",
-      "Scheduled payouts"
+      "課程時間｜約 1 – 1.5 小時",
+      "適合人數｜可依活動需求討論",
+      "難易程度｜★★★☆☆",
+      "成品內容｜傘繩飲料提帶 1 條",
+      "適合場域｜社區、學校、企業活動、市集體驗"
     ]
   }
 ]
