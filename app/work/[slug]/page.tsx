@@ -63,9 +63,6 @@ export default async function ProjectPage({
 
   return (
     <div className={specimenClassNames}>
-      {/* ---------------------------------------------------------------- */}
-      {/* Title                                                             */}
-      {/* ---------------------------------------------------------------- */}
       <section className="pt-[clamp(2.5rem,7vh,5rem)]">
         <div className="u-shell">
           <Link
@@ -94,8 +91,6 @@ export default async function ProjectPage({
           </p>
         </div>
 
-        {/* This project's colours, full-bleed — the chromatic index from the
-            home page, filtered down to one project. */}
         {project.palette.length > 0 && (
           <div
             className="mt-[clamp(2.5rem,6vh,4rem)] flex h-3 w-full"
@@ -108,8 +103,6 @@ export default async function ProjectPage({
                 className="h-full flex-1"
                 style={{
                   backgroundColor: swatch.hex,
-                  /* Palettes here include near-blacks; without a hairline they
-                     read as a gap in the band rather than as a colour. */
                   boxShadow: "inset 0 0 0 1px rgba(233,229,221,0.10)",
                 }}
               />
@@ -118,9 +111,6 @@ export default async function ProjectPage({
         )}
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Hero plate                                                        */}
-      {/* ---------------------------------------------------------------- */}
       {hero && (
         <section className="u-shell pt-[clamp(2.5rem,6vh,4rem)]">
           <div
@@ -145,9 +135,6 @@ export default async function ProjectPage({
         </section>
       )}
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Case study + specification                                        */}
-      {/* ---------------------------------------------------------------- */}
       <section className="py-[var(--spacing-section)]">
         <div className="u-shell grid gap-x-[clamp(2rem,6vw,6rem)] gap-y-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <div data-reveal>
@@ -174,7 +161,7 @@ export default async function ProjectPage({
             <div className="flex flex-col gap-14" data-reveal>
               {project.keywords.length > 0 && (
                 <div>
-                  <h2 className="u-eyebrow">Direction</h2>
+                  <h2 className="u-eyebrow">特色</h2>
                   <ul className="mt-5 flex flex-wrap gap-x-2 gap-y-2">
                     {project.keywords.map((keyword) => (
                       <li
@@ -190,7 +177,7 @@ export default async function ProjectPage({
 
               {project.typography.length > 0 && (
                 <div>
-                  <h2 className="u-eyebrow">Typography</h2>
+                  <h2 className="u-eyebrow">字體</h2>
                   <div className="mt-5">
                     <Specimen specs={project.typography} />
                   </div>
@@ -199,7 +186,7 @@ export default async function ProjectPage({
 
               {project.palette.length > 0 && (
                 <div>
-                  <h2 className="u-eyebrow">Colour</h2>
+                  <h2 className="u-eyebrow">色彩</h2>
                   <div className="mt-5">
                     <Palette swatches={project.palette} />
                   </div>
@@ -210,17 +197,12 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Release journey / key facts                                       */}
-      {/* ---------------------------------------------------------------- */}
       {project.steps.length > 0 && (
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <h2 className="u-eyebrow" data-reveal>
-              Release journey
+              製作流程
             </h2>
-            {/* Numbered because the content genuinely is a sequence: a track
-                cannot be scheduled before it is verified. */}
             <ol className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
               {project.steps.map((step) => (
                 <li key={step.n} className="bg-ink p-7" data-reveal>
@@ -261,25 +243,16 @@ export default async function ProjectPage({
         </section>
       )}
 
-      {/* ---------------------------------------------------------------- */}
-      {/* The wall                                                          */}
-      {/* ---------------------------------------------------------------- */}
       {plates.length > 0 && (
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-              <h2 className="u-eyebrow">
-                {project.kind === "moodboard" ? "Mood board" : "Visual language"}
-              </h2>
+              <h2 className="u-eyebrow">作品圖片</h2>
               <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-                {String(plates.length).padStart(2, "0")} plates
+                {String(plates.length).padStart(2, "0")} 張
               </span>
             </div>
 
-            {/* Two columns from the smallest screen up. A mood board is a
-                board — one plate per phone screen turns nine images into nine
-                screens of scrolling and loses the comparison the grid exists
-                to make. */}
             <div className="mt-10 grid grid-cols-2 items-start gap-x-[clamp(0.75rem,2.5vw,2.5rem)] gap-y-[clamp(1.75rem,5vw,4.5rem)] sm:mt-12 lg:grid-cols-3">
               {plates.map((asset) => (
                 <div key={asset.src} data-reveal>
@@ -296,16 +269,13 @@ export default async function ProjectPage({
         </section>
       )}
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Applications                                                      */}
-      {/* ---------------------------------------------------------------- */}
       {applications.length > 0 && (
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-              <h2 className="u-eyebrow">Applications</h2>
+              <h2 className="u-eyebrow">應用展示</h2>
               <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-                {String(applications.length).padStart(2, "0")} formats
+                {String(applications.length).padStart(2, "0")} 項
               </span>
             </div>
 
@@ -320,22 +290,14 @@ export default async function ProjectPage({
         </section>
       )}
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Presentation spreads                                              */}
-      {/* ---------------------------------------------------------------- */}
       {deck.length > 0 && (
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-              <h2 className="u-eyebrow">Presentation spreads</h2>
-              <span className="u-eyebrow lg:hidden">Scroll to read →</span>
+              <h2 className="u-eyebrow">延伸展示</h2>
+              <span className="u-eyebrow lg:hidden">滑動查看 →</span>
             </div>
 
-            {/* These are full deck pages: a 1600×900 spread squeezed into a
-                350px phone renders its captions at about three pixels. Below
-                the large breakpoint each spread keeps a readable width and
-                pans sideways inside its own scroller, so the page itself
-                never scrolls horizontally. */}
             <div className="mt-10 flex flex-col gap-[clamp(1.5rem,4vw,3rem)] sm:mt-12">
               {deck.map((asset) => (
                 <div
@@ -349,7 +311,7 @@ export default async function ProjectPage({
                     srcSet={srcSetFor(asset)}
                     width={asset.w}
                     height={asset.h}
-                    alt={`${project.title} — presentation spread`}
+                    alt={`${project.title} — 延伸展示`}
                     loading="lazy"
                     decoding="async"
                     sizes="(min-width: 1024px) 90vw, 1150px"
@@ -363,9 +325,6 @@ export default async function ProjectPage({
         </section>
       )}
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Next                                                              */}
-      {/* ---------------------------------------------------------------- */}
       {next && (
         <section className="border-t border-line">
           <Link

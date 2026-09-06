@@ -57,18 +57,18 @@ export default function Home() {
             {total > 0 && (
               <dl className="u-numeric flex gap-10 text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
                 <div className="flex flex-col gap-1.5">
-                  <dt className="sr-only">Projects</dt>
+                  <dt className="sr-only">項目</dt>
                   <dd className="text-[length:var(--text-h3)] tracking-normal text-bone">
                     {String(projects.length).padStart(2, "0")}
                   </dd>
-                  <dt aria-hidden="true">Projects</dt>
+                  <dt aria-hidden="true">項目</dt>
                 </div>
                 <div className="flex flex-col gap-1.5">
-                  <dt className="sr-only">Images</dt>
+                  <dt className="sr-only">圖片</dt>
                   <dd className="text-[length:var(--text-h3)] tracking-normal text-bone">
                     {total}
                   </dd>
-                  <dt aria-hidden="true">Images</dt>
+                  <dt aria-hidden="true">圖片</dt>
                 </div>
               </dl>
             )}
@@ -93,9 +93,9 @@ export default function Home() {
       <section id="work" className="scroll-mt-20 py-[var(--spacing-section)]">
         <div className="u-shell">
           <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-            <h2 className="u-eyebrow">Selected work</h2>
+            <h2 className="u-eyebrow">作品與課程</h2>
             <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-              {String(projects.length).padStart(2, "0")} projects
+              {String(projects.length).padStart(2, "0")} 項
             </span>
           </div>
 
@@ -125,7 +125,7 @@ export default function Home() {
         >
           <div className="u-shell">
             <h2 className="u-eyebrow" data-reveal>
-              What I do
+              服務內容
             </h2>
 
             <ul className="mt-12">
@@ -157,7 +157,7 @@ export default function Home() {
       >
         <div className="u-shell grid gap-x-[clamp(2rem,6vw,6rem)] gap-y-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
           <div data-reveal>
-            <h2 className="u-eyebrow">About</h2>
+            <h2 className="u-eyebrow">關於布有趣</h2>
             <div className="mt-8 flex flex-col gap-6">
               {[...site.intro, ...site.about].map((paragraph, i) => (
                 <p key={i} className="u-prose max-w-[62ch]">

@@ -3,12 +3,6 @@ import { heroAsset } from "@/lib/content";
 import { srcSetFor } from "@/lib/images";
 import type { Project } from "@/lib/types";
 
-/**
- * A project as it appears in the index: one plate, its wall label, and the
- * colours it was built from. The palette strip is information rather than
- * ornament — it tells you the project's colour world before you open it, and
- * ties each entry back to the chromatic index in the hero.
- */
 export default function ProjectCard({
   project,
   priority = false,
@@ -62,7 +56,7 @@ export default function ProjectCard({
       {project.palette.length > 0 && (
         <ul
           className="mt-5 flex h-1.5 w-full max-w-[22rem] overflow-hidden"
-          aria-label={`${project.palette.length} colours`}
+          aria-label={`${project.palette.length} 種色彩`}
         >
           {project.palette.map((swatch) => (
             <li

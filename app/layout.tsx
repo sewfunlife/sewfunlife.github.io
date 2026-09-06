@@ -41,11 +41,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    /* suppressHydrationWarning: the inline script below removes `no-js` from
-       this element before hydration, so its class list is expected to differ
-       from what the server rendered. */
     <html
-      lang="en"
+      lang="zh-Hant"
       suppressHydrationWarning
       className={`no-js ${syne.variable} ${archivo.variable}`}
     >
@@ -57,7 +54,7 @@ export default function RootLayout({
           href="#main"
           className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-bone focus:px-4 focus:py-2 focus:text-[length:var(--text-meta)] focus:font-semibold focus:tracking-widest focus:text-ink focus:uppercase"
         >
-          Skip to content
+          跳至主要內容
         </a>
         <Header />
         <main id="main">{children}</main>
