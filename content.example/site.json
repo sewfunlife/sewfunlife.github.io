@@ -7,10 +7,11 @@
     "label": "Built with the Futura Research template",
     "url": "http://futura-research.com/"
   },
-  "tagline": "手作，讓生活更有趣！",
+  "tagline": "So fun life★手作讓生活更有趣",
   "intro": [
-    "團體課程、手作體驗、市集 DIY，從動手做開始，把手作帶進日常與活動現場。",
-    "也製作寵物圍兜、手作小物與材料包，提供課程邀約、活動合作與報名洽詢。"
+    "團體課程 • 手作體驗 • 市集DIY",
+    "寵物圍兜 • 手作小物 • 材料包販售",
+    "課程邀約／合作／報名［請私訊］"
   ],
   "about": [],
   "services": [
@@ -28,7 +29,10 @@
     }
   ],
   "social": {
-    "instagram": "https://www.instagram.com/sewfunlife/",
+    "instagram": "https://www.instagram.com/sewfunlife",
+    "threads": "https://www.threads.com/@sewfunlife",
+    "facebook": "https://www.facebook.com/sewfunlife",
+    "line": "https://lin.ee/sQUleX5",
     "behance": "",
     "linkedin": "",
     "dribbble": "",

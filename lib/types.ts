@@ -2,6 +2,9 @@
 
 export type Social = {
   instagram?: string;
+  threads?: string;
+  facebook?: string;
+  line?: string;
   behance?: string;
   linkedin?: string;
   dribbble?: string;

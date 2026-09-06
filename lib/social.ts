@@ -14,6 +14,9 @@ const BUILDERS: Array<{
   base: string;
 }> = [
   { key: "instagram", label: "Instagram", base: "https://instagram.com/" },
+  { key: "threads", label: "Threads", base: "https://threads.com/@" },
+  { key: "facebook", label: "Facebook", base: "https://facebook.com/" },
+  { key: "line", label: "LINE", base: "https://lin.ee/" },
   { key: "behance", label: "Behance", base: "https://behance.net/" },
   { key: "linkedin", label: "LinkedIn", base: "https://linkedin.com/in/" },
   { key: "dribbble", label: "Dribbble", base: "https://dribbble.com/" },
