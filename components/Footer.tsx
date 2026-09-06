@@ -4,6 +4,7 @@ import { socialLinks } from "@/lib/social";
 export default function Footer() {
   const links = socialLinks(site.social);
   const year = new Date().getFullYear();
+  const instagram = site.social.instagram;
 
   /* Set large, a long address will wrap somewhere. Offering a break after the
      @ means it wraps there rather than mid-word ("exampl / e.com"). */
@@ -12,21 +13,32 @@ export default function Footer() {
   return (
     <footer id="contact" className="border-t border-line">
       <div className="u-shell py-[var(--spacing-section)]">
-        <p className="u-eyebrow">Available for hire</p>
+        <p className="u-eyebrow">課程邀約・合作・報名</p>
 
-        <a
-          href={`mailto:${site.email}`}
-          className="u-display mt-6 block text-[length:var(--text-h2)] break-words hyphens-none text-bone transition-opacity hover:opacity-60"
-        >
-          {domain ? (
-            <>
-              {mailbox}@<wbr />
-              {domain}
-            </>
-          ) : (
-            site.email
-          )}
-        </a>
+        {site.email ? (
+          <a
+            href={`mailto:${site.email}`}
+            className="u-display mt-6 block text-[length:var(--text-h2)] break-words hyphens-none text-bone transition-opacity hover:opacity-60"
+          >
+            {domain ? (
+              <>
+                {mailbox}@<wbr />
+                {domain}
+              </>
+            ) : (
+              site.email
+            )}
+          </a>
+        ) : instagram ? (
+          <a
+            href={instagram}
+            target="_blank"
+            rel="noreferrer"
+            className="u-display mt-6 block text-[length:var(--text-h2)] break-words hyphens-none text-bone transition-opacity hover:opacity-60"
+          >
+            Instagram 私訊
+          </a>
+        ) : null}
 
         {links.length > 0 && (
           <ul className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-3">

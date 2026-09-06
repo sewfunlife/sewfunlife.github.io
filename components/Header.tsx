@@ -15,6 +15,7 @@ export default function Header() {
      in for it. Two links do not earn a hamburger — hiding them behind a menu
      would add a tap, a script and a focus trap to save 90 pixels. */
   const firstName = site.name.trim().split(/\s+/)[0] ?? site.name;
+  const instagram = site.social.instagram;
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-ink/85 backdrop-blur-md">
@@ -43,14 +44,18 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            <li>
-              <a
-                href={`mailto:${site.email}`}
-                className="flex min-h-9 items-center border border-line-2 px-3 text-[length:var(--text-micro)] tracking-[0.14em] text-bone uppercase transition-colors hover:border-bone hover:bg-bone hover:text-ink sm:tracking-[0.18em]"
-              >
-                Email
-              </a>
-            </li>
+            {(site.email || instagram) && (
+              <li>
+                <a
+                  href={site.email ? `mailto:${site.email}` : instagram}
+                  target={!site.email && instagram ? "_blank" : undefined}
+                  rel={!site.email && instagram ? "noreferrer" : undefined}
+                  className="flex min-h-9 items-center border border-line-2 px-3 text-[length:var(--text-micro)] tracking-[0.14em] text-bone uppercase transition-colors hover:border-bone hover:bg-bone hover:text-ink sm:tracking-[0.18em]"
+                >
+                  {site.email ? "Email" : "Instagram"}
+                </a>
+              </li>
+            )}
           </ul>
         </nav>
       </div>

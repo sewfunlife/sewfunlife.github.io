@@ -1,58 +1,42 @@
 {
-  "name": "Your Name",
-  "role": "Graphic Designer",
-  "email": "email@example.com",
+  "name": "布有趣",
+  "role": "手作課程・體驗教學",
+  "email": "",
   "location": "",
   "credit": {
     "label": "Built with the Futura Research template",
     "url": "http://futura-research.com/"
   },
-  "tagline": "Write a one-line tagline that captures what you do and how you do it, in plain words.",
+  "tagline": "手作，讓生活更有趣！",
   "intro": [
-    "Introduce yourself here — start with your name, your discipline and the kind of designer you are. Two or three sentences that bring together how you approach concept development, typography, colour, imagery and composition, so a first-time visitor understands your visual point of view right away.",
-    "List the areas you work across — for example music artwork, campaign design, branding, editorial layouts, presentations and promotional communication. Explain how you approach a brief, whether it starts with a sound, a business objective or a physical space, so readers understand your process.",
-    "Describe what you aim for in every project — for example work that is expressive but practical, visually strong but easy to understand, and consistent across digital, print and real-world applications. Use this closing sentence to state what makes the final outcome feel intentional and ready to use."
+    "團體課程、手作體驗、市集 DIY，從動手做開始，把手作帶進日常與活動現場。",
+    "也製作寵物圍兜、手作小物與材料包，提供課程邀約、活動合作與報名洽詢。"
   ],
-  "about": [
-    "Describe your design practice here — the research, process or point of view that shapes your work. Mention the elements you enjoy working with, such as typography, photography, illustration, texture and colour, and how they come together to give each project its own character.",
-    "Summarise what this portfolio includes — for example cover artwork and music identities, hospitality design, property campaigns and digital-platform communication. Close with the objective that ties it together: understand the idea, define the visual language and extend it consistently across every format."
-  ],
+  "about": [],
   "services": [
     {
-      "title": "Cover Artwork",
-      "body": "Single, EP and album artwork designed around an artist's sound and identity."
+      "title": "手作教學",
+      "body": "團體課程・課程報名・材料包販售"
     },
     {
-      "title": "Campaign Design",
-      "body": "Cohesive design systems for posters, social media and launch campaigns."
+      "title": "作品販售",
+      "body": "寵物圍兜・手作小物・市集販售"
     },
     {
-      "title": "Editorial & Presentation Design",
-      "body": "Clear, well-organised layouts for brochures, catalogues and presentations."
-    },
-    {
-      "title": "Brand & Visual Identity",
-      "body": "Typography, colour and imagery developed into a consistent visual language."
-    },
-    {
-      "title": "Promotional & Social Design",
-      "body": "Adaptable campaign assets built for clear, consistent communication."
-    },
-    {
-      "title": "Print Design",
-      "body": "Menus, brochures and promotional materials prepared for print production."
+      "title": "創意體驗",
+      "body": "手作體驗・市集 DIY・活動邀約與合作"
     }
   ],
   "social": {
-    "instagram": "",
+    "instagram": "https://www.instagram.com/sewfunlife/",
     "behance": "",
     "linkedin": "",
     "dribbble": "",
     "phone": ""
   },
   "seo": {
-    "siteName": "Your Name — Graphic Designer",
-    "description": "A portfolio template for graphic designers to showcase branding, campaign and editorial design work.",
-    "url": "https://example.com"
+    "siteName": "布有趣｜手作課程・體驗教學",
+    "description": "布有趣提供團體手作課程、手作體驗、市集 DIY、寵物圍兜、手作小物與材料包，歡迎課程邀約與活動合作。",
+    "url": "https://sewfunlife.github.io/"
   }
 }
