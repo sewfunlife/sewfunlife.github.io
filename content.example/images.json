@@ -18,5 +18,36 @@
         "label": "編織飲料提帶"
       }
     ]
+  },
+  "leather-dog-keychain-charm": {
+    "cover": [
+      {
+        "src": "https://framerusercontent.com/images/Pe2rPPikaLdQYWXS16fxrF2QA.png",
+        "w": 1200,
+        "h": 1200,
+        "key": "01-cover",
+        "label": "皮革臘腸狗鑰匙圈"
+      }
+    ],
+    "mood": [
+      {
+        "src": "https://framerusercontent.com/images/g5qUD4CTfA5pHyDpOqcrhYgJg.png",
+        "w": 1200,
+        "h": 1200,
+        "key": "02-course-image",
+        "label": "皮革臘腸狗鑰匙圈"
+      }
+    ]
+  },
+  "leather-seal-box": {
+    "cover": [
+      {
+        "src": "https://framerusercontent.com/images/gs4ZKaMI2eDAIfYX8Ephhc4y5U.png",
+        "w": 1200,
+        "h": 1200,
+        "key": "01-cover",
+        "label": "皮革口金盒"
+      }
+    ]
   }
 }
