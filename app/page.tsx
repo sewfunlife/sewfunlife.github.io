@@ -82,11 +82,8 @@ export default function Home() {
 
       <section id="work" className="scroll-mt-20 py-[var(--spacing-section)]">
         <div className="u-shell">
-          <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
+          <div className="border-b border-line pb-6">
             <h2 className="u-eyebrow">課程</h2>
-            <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-              {String(projects.length).padStart(2, "0")} 門課程
-            </span>
           </div>
 
           <div className="mt-[clamp(2.5rem,6vw,5rem)] grid gap-x-[clamp(1.5rem,4vw,4rem)] gap-y-[clamp(3.5rem,9vw,7rem)] lg:grid-cols-2">
@@ -110,7 +107,7 @@ export default function Home() {
         >
           <div className="u-shell">
             <h2 className="u-eyebrow" data-reveal>
-              服務內容
+              服務項目
             </h2>
 
             <ul className="mt-12">

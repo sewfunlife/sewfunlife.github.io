@@ -41,6 +41,58 @@ export async function generateMetadata({
   };
 }
 
+function parseFact(fact: string) {
+  const [label, ...rest] = fact.split("｜");
+  return { label, value: rest.join("｜") };
+}
+
+function FactIcon({ label }: { label: string }) {
+  const common = "h-5 w-5 shrink-0 text-bone-3";
+
+  if (label === "難易程度") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9L12 3Z" />
+      </svg>
+    );
+  }
+
+  if (label === "課程時間") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="M12 7.5v5l3.5 2" />
+      </svg>
+    );
+  }
+
+  if (label === "適合人數") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <circle cx="9" cy="9" r="3" />
+        <circle cx="16.5" cy="10" r="2.5" />
+        <path d="M3.5 19c.7-3.3 2.7-5 5.5-5s4.8 1.7 5.5 5M14 14.5c3.2-.4 5.3 1.1 6 4.5" />
+      </svg>
+    );
+  }
+
+  if (label === "適合場域") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+        <path d="M12 21s6-5.4 6-11a6 6 0 1 0-12 0c0 5.6 6 11 6 11Z" />
+        <circle cx="12" cy="10" r="2" />
+      </svg>
+    );
+  }
+
+  return (
+    <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5" />
+      <path d="M12 10v6M12 7h.01" />
+    </svg>
+  );
+}
+
 export default async function ProjectPage({
   params,
 }: {
@@ -141,18 +193,33 @@ export default async function ProjectPage({
             {project.summary && (
               <>
                 <h2 className="u-eyebrow">課程說明</h2>
-                <p className="u-prose mt-7 max-w-[58ch]">{project.summary}</p>
+                <div className="mt-7 flex max-w-[58ch] flex-col gap-5">
+                  {project.summary.split(/\n{2,}/).map((paragraph, i) => (
+                    <p key={i} className="u-prose whitespace-pre-line">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </>
             )}
 
             {project.sections.length > 0 && (
               <div className="mt-14 flex flex-col gap-10">
-                {project.sections.map((section) => (
-                  <div key={section.heading}>
-                    <h3 className="u-eyebrow">{section.heading}</h3>
-                    <p className="u-prose mt-4 max-w-[58ch]">{section.body}</p>
-                  </div>
-                ))}
+                {project.sections.map((section) => {
+                  const items = section.body.split("\n").map((item) => item.trim()).filter(Boolean);
+                  return (
+                    <div key={section.heading}>
+                      <h3 className="u-eyebrow">{section.heading}</h3>
+                      {items.length > 1 ? (
+                        <ul className="u-prose mt-4 flex max-w-[58ch] list-disc flex-col gap-2 pl-5">
+                          {items.map((item) => <li key={item}>{item}</li>)}
+                        </ul>
+                      ) : (
+                        <p className="u-prose mt-4 max-w-[58ch]">{section.body}</p>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
             )}
           </div>
@@ -229,15 +296,24 @@ export default async function ProjectPage({
               課程資訊
             </h2>
             <ul className="mt-10 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
-              {project.facts.map((fact) => (
-                <li
-                  key={fact}
-                  className="border-t border-line pt-4 text-[length:var(--text-lead)] leading-snug text-bone"
-                  data-reveal
-                >
-                  {fact}
-                </li>
-              ))}
+              {project.facts.map((fact) => {
+                const { label, value } = parseFact(fact);
+                return (
+                  <li
+                    key={fact}
+                    className="border-t border-line pt-4"
+                    data-reveal
+                  >
+                    <div className="flex items-center gap-2 text-[length:var(--text-meta)] text-bone-3">
+                      <FactIcon label={label} />
+                      <span>{label}</span>
+                    </div>
+                    <p className="mt-3 text-[length:var(--text-lead)] leading-snug text-bone">
+                      {value}
+                    </p>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>

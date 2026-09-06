@@ -3,6 +3,11 @@ import { heroAsset } from "@/lib/content";
 import { srcSetFor } from "@/lib/images";
 import type { Project } from "@/lib/types";
 
+function factValue(project: Project, label: string) {
+  const fact = project.facts.find((item) => item.startsWith(`${label}｜`));
+  return fact ? fact.slice(label.length + 1) : "";
+}
+
 export default function ProjectCard({
   project,
   priority = false,
@@ -11,6 +16,8 @@ export default function ProjectCard({
   priority?: boolean;
 }) {
   const asset = heroAsset(project.slug);
+  const difficulty = factValue(project, "難易程度");
+  const duration = factValue(project, "課程時間");
 
   return (
     <article className="group">
@@ -39,34 +46,15 @@ export default function ProjectCard({
           )}
         </div>
 
-        <div className="mt-5 flex items-start justify-between gap-6">
-          <h3 className="u-display text-[length:var(--text-h2)] text-bone transition-opacity group-hover:opacity-60">
-            {project.displayTitle}
-          </h3>
-          <span className="u-eyebrow mt-2 shrink-0 text-right">
-            {project.discipline}
-          </span>
+        <h3 className="u-display mt-5 text-[length:var(--text-h2)] text-bone transition-opacity group-hover:opacity-60">
+          {project.displayTitle}
+        </h3>
+
+        <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-[length:var(--text-meta)] text-bone-2">
+          {difficulty && <span aria-label={`難易程度 ${difficulty}`}>{difficulty}</span>}
+          {duration && <span>{duration}</span>}
         </div>
-
-        <p className="u-label-caption mt-3 max-w-[46ch] text-[length:var(--text-body)] text-bone-2">
-          {project.tagline}
-        </p>
       </Link>
-
-      {project.palette.length > 0 && (
-        <ul
-          className="mt-5 flex h-1.5 w-full max-w-[22rem] overflow-hidden"
-          aria-label={`${project.palette.length} 種色彩`}
-        >
-          {project.palette.map((swatch) => (
-            <li
-              key={swatch.hex}
-              className="h-full flex-1"
-              style={{ backgroundColor: swatch.hex }}
-            />
-          ))}
-        </ul>
-      )}
     </article>
   );
 }
