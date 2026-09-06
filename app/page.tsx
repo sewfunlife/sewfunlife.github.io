@@ -137,7 +137,10 @@ export default function Home() {
         <div className="u-shell grid gap-x-[clamp(2rem,6vw,6rem)] gap-y-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)]">
           <div data-reveal>
             <h2 className="u-eyebrow">關於布有趣</h2>
-            <div className="mt-8 flex flex-col gap-6">
+            <p className="u-display mt-8 max-w-[18ch] text-[length:var(--text-h3)] leading-[1.15] text-bone">
+              看得懂、跟得上、做得好。
+            </p>
+            <div className="mt-7 flex flex-col gap-6">
               {[...site.intro, ...site.about].map((paragraph, i) => (
                 <p key={i} className="u-prose max-w-[62ch]">
                   {paragraph}
