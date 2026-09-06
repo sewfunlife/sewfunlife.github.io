@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#d4e5c8">
+<meta name="robots" content="index,follow">
+<title>樂樂手創屋｜Happy House</title>
+<meta name="description" content="樂樂手創屋｜手作、植物與生活風格的社群與聯絡入口。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --ink: #2f3d32;
+  --ink-soft: rgba(47, 61, 50, 0.68);
+  --ease: cubic-bezier(.23, 1, .32, 1);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  font-synthesis: none;
+}
+* { box-sizing: border-box; }
+html { min-width: 320px; background: #d4e5c8; }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100svh;
+  color: var(--ink);
+  position: relative;
+  overflow-x: hidden;
+  background: linear-gradient(180deg,#c5dcc0 0%,#d3e5cb 22%,#e2edcf 48%,#d5e4bc 72%,#b8cfa0 100%);
+}
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid rgba(90,130,85,.6); outline-offset: 4px; }
+.scene { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; height: 100dvh; }
+.mist { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 30%,rgba(255,255,255,.25) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(255,255,255,.18) 0%,transparent 45%); }
+.clouds { position: absolute; inset: 0 0 auto; width: 100%; height: 48%; }
+.cloud { position: absolute; background: rgba(255,255,255,.82); border-radius: 100px; filter: drop-shadow(0 4px 14px rgba(255,255,255,.35)); }
+.cloud:before,.cloud:after { content:""; position:absolute; background:inherit; border-radius:50%; }
+.c1 { width:96px;height:33px;top:8%;left:-125px;animation:drift 62s linear infinite;opacity:.72; }
+.c1:before { width:42px;height:42px;top:-22px;left:12px; }
+.c1:after { width:50px;height:35px;top:-13px;right:12px; }
+.c2 { width:130px;height:40px;top:18%;left:-170px;animation:drift 80s linear infinite -28s;opacity:.65; }
+.c2:before { width:56px;height:56px;top:-28px;left:20px; }
+.c2:after { width:64px;height:40px;top:-16px;right:16px; }
+.c3 { width:80px;height:28px;top:5%;left:-100px;animation:drift 68s linear infinite -40s;opacity:.58; }
+.c3:before { width:34px;height:34px;top:-16px;left:10px; }
+.c3:after { width:42px;height:28px;top:-10px;right:10px; }
+@keyframes drift { from{transform:translateX(0)} to{transform:translateX(calc(100vw + 280px))} }
+.leaf { position:absolute;width:14px;height:8px;border-radius:100% 0 100% 0;background:rgba(110,150,85,.45);transform-origin:center;animation:leafFloat 14s ease-in-out infinite; }
+.l1 { top:28%;left:12%;transform:rotate(-30deg);animation-delay:0s; }
+.l2 { top:36%;left:78%;width:12px;height:7px;background:rgba(140,170,95,.4);animation-delay:-4s;animation-duration:16s; }
+.l3 { top:22%;left:55%;width:11px;height:6px;background:rgba(95,140,80,.38);animation-delay:-8s;animation-duration:13s; }
+@keyframes leafFloat { 0%,100%{transform:translateY(0) rotate(-28deg);opacity:.5} 50%{transform:translateY(18px) rotate(12deg);opacity:.75} }
+.forest { position:absolute;bottom:0;left:0;width:100%;height:32%; }
+.tree-line { position:absolute;bottom:18%;left:-5%;width:110%;height:55%;background:radial-gradient(ellipse 40px 70px at 8% 100%,#7a9e68 0%,transparent 70%),radial-gradient(ellipse 50px 85px at 18% 100%,#6d925c 0%,transparent 70%),radial-gradient(ellipse 45px 75px at 30% 100%,#7fa870 0%,transparent 70%),radial-gradient(ellipse 55px 90px at 45% 100%,#6a8f58 0%,transparent 70%),radial-gradient(ellipse 48px 80px at 58% 100%,#789e65 0%,transparent 70%),radial-gradient(ellipse 52px 88px at 72% 100%,#6e945c 0%,transparent 70%),radial-gradient(ellipse 44px 72px at 85% 100%,#82ab72 0%,transparent 70%),radial-gradient(ellipse 48px 78px at 95% 100%,#71985f 0%,transparent 70%);opacity:.55; }
+.hill { position:absolute;bottom:0;width:150%;border-radius:50% 50% 0 0; }
+.hill.back { height:85%;left:-25%;background:linear-gradient(180deg,#8fb87a 0%,#6fa05e 100%);opacity:.9; }
+.hill.front { height:52%;left:-12%;background:linear-gradient(180deg,#a8c98f 0%,#87b572 100%);z-index:1; }
+.flower { position:absolute;bottom:12%;width:9px;height:9px;z-index:2;border-radius:50%;background:#fffef5;box-shadow:3px 0 0 -1px #fffef5,-3px 0 0 -1px #fffef5,0 3px 0 -1px #fffef5,0 -3px 0 -1px #fffef5;transform-origin:center bottom;animation:sway 5.5s ease-in-out infinite; }
+.flower:before { content:"";position:absolute;inset:2px;border-radius:50%;background:#e8c96a; }
+.flower:after { content:"";position:absolute;bottom:-11px;left:50%;width:1.5px;height:11px;background:#5a9a58;transform:translateX(-50%);border-radius:1px; }
+.f1{left:8%;animation-delay:0s}.f2{left:22%;bottom:16%;animation-delay:-1.2s}.f3{left:38%;animation-delay:-.6s}.f4{left:54%;bottom:14%;animation-delay:-2.1s}.f5{left:70%;animation-delay:-.9s}.f6{left:86%;bottom:11%;animation-delay:-1.7s}
+@keyframes sway { 0%,100%{transform:rotate(-5deg)} 50%{transform:rotate(5deg)} }
+.page { position:relative;z-index:1;width:min(100% - 32px,420px);margin:0 auto;padding:40px 0 36px; }
+.brand { display:flex;flex-direction:column;align-items:center;text-align:center;margin-bottom:28px;opacity:0;animation:fadeUp .75s var(--ease) forwards; }
+.avatar { width:86px;height:86px;margin-bottom:14px;border-radius:50%;background:#fffdf6;border:1px solid rgba(120,150,100,.28);box-shadow:0 6px 20px rgba(90,120,70,.1);display:grid;place-items:center; }
+.avatar svg { width:72px;height:72px;display:block; }
+.brand h1 { margin:0;font-size:24px;font-weight:600;letter-spacing:.04em;color:#2a3a2e;line-height:1.35; }
+.brand-en { margin:5px 0 0;font-size:13px;font-weight:400;color:var(--ink-soft);letter-spacing:.06em; }
+.list { display:grid;gap:11px; }
+.btn { display:grid;grid-template-columns:40px 1fr auto;align-items:center;gap:12px;min-height:58px;padding:12px 18px 12px 14px;border-radius:999px;background:rgba(255,253,245,.82);box-shadow:0 4px 14px rgba(70,100,60,.08),0 1px 3px rgba(70,100,60,.04);transition:transform .2s var(--ease),box-shadow .2s var(--ease),filter .2s var(--ease);opacity:0;animation:fadeUp .6s var(--ease) forwards; }
+.btn:nth-child(1){animation-delay:.12s}.btn:nth-child(2){animation-delay:.2s}.btn:nth-child(3){animation-delay:.28s}.btn:nth-child(4){animation-delay:.36s}.btn:nth-child(5){animation-delay:.44s}
+.btn .icon { width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.75); }
+.btn .icon svg { width:18px;height:18px;display:block; }
+.btn .brand-icon { fill:currentColor; }
+.btn .site-icon { fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round; }
+.btn .label { font-size:16px;font-weight:600;letter-spacing:.02em; }
+.btn .arr { font-size:18px;opacity:.55;transition:transform .2s var(--ease); }
+.btn.ig { background:linear-gradient(135deg,#f3e0dc 0%,#edd4cf 100%);color:#7a4e48; }
+.btn.ig .icon { color:#c4786e; }
+.btn.threads { background:linear-gradient(135deg,#e8e4d8 0%,#ddd8ca 100%);color:#4a4a3e; }
+.btn.threads .icon { color:#6a6a5a; }
+.btn.fb { background:linear-gradient(135deg,#dce6ef 0%,#cfdceb 100%);color:#3d5a75; }
+.btn.fb .icon { color:#5b7fa3; }
+.btn.web { background:linear-gradient(135deg,#e0ebcf 0%,#d2e0bc 100%);color:#3f5c38; }
+.btn.web .icon { color:#6a8f5c; }
+.btn.line { background:linear-gradient(135deg,#d8edc8 0%,#c8e3b4 100%);color:#2f5c32; }
+.btn.line .icon { color:#4e9a52; }
+.btn.is-empty { opacity:.55;pointer-events:none;filter:grayscale(.15); }
+@media (hover:hover) and (pointer:fine) { .btn:not(.is-empty):hover { transform:translateY(-2px);box-shadow:0 10px 22px rgba(70,100,60,.12),0 2px 6px rgba(70,100,60,.06);filter:brightness(1.03); } .btn:not(.is-empty):hover .arr { transform:translateX(3px); } }
+.btn:not(.is-empty):active { transform:translateY(0);filter:brightness(.98); }
+.footer { margin-top:36px;padding-top:18px;border-top:1px solid rgba(80,120,70,.18);text-align:center;opacity:0;animation:fadeUp .7s var(--ease) .55s forwards; }
+.footer p { margin:0;font-size:12px;color:rgba(47,61,50,.62);letter-spacing:.03em; }
+@keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+@media (max-width:620px) { .page{padding:28px 0 28px;width:min(100% - 28px,420px)} .brand{margin-bottom:22px}.avatar{width:80px;height:80px}.avatar svg{width:66px;height:66px}.brand h1{font-size:22px}.btn{min-height:54px;padding:11px 16px 11px 12px;gap:10px}.btn .icon{width:34px;height:34px}.btn .label{font-size:15px}.forest{height:26%} }
+@media (prefers-reduced-motion:reduce) { .cloud,.leaf,.flower,.brand,.btn,.footer{animation:none!important;opacity:1!important;transform:none!important}.c1{left:10%;top:10%}.c2{left:55%;top:16%}.c3{left:30%;top:6%} }
+</style>
+</head>
+<body>
+<div class="scene" aria-hidden="true">
+  <div class="mist"></div>
+  <div class="clouds"><div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div></div>
+  <div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div>
+  <div class="forest"><div class="tree-line"></div><div class="hill back"></div><div class="hill front"></div><div class="flower f1"></div><div class="flower f2"></div><div class="flower f3"></div><div class="flower f4"></div><div class="flower f5"></div><div class="flower f6"></div></div>
+</div>
+<main class="page">
+<header class="brand">
+  <div class="avatar" aria-hidden="true">
+    <svg viewBox="0 0 120 120" fill="none"><circle cx="60" cy="60" r="58" fill="#fffdf6"/><path d="M32 62 L60 38 L88 62 Z" fill="#c4a574"/><path d="M36 62 L60 42 L84 62 Z" fill="#d4b896"/><rect x="40" y="60" width="40" height="28" rx="2" fill="#e8d5b5"/><rect x="54" y="70" width="12" height="18" rx="1.5" fill="#8b6f4e"/><rect x="44" y="66" width="7" height="7" rx="1" fill="#a8c4a0"/><rect x="69" y="66" width="7" height="7" rx="1" fill="#a8c4a0"/><path d="M28 78 C22 70 24 62 30 60 C32 68 34 74 32 80" fill="#7a9e68"/><path d="M34 80 C30 72 32 66 38 64 C38 72 38 76 36 82" fill="#8fb87a"/><path d="M90 76 C96 68 94 62 88 60 C86 68 86 74 88 80" fill="#7a9e68"/><path d="M74 48 C76 44 78 42 76 38" stroke="#b8c4b0" stroke-width="2" stroke-linecap="round" opacity="0.6"/></svg>
+  </div>
+  <h1>樂樂手創屋</h1><p class="brand-en">Happy House</p>
+</header>
+<nav class="list" aria-label="樂樂手創屋連結">
+  <a class="btn ig" href="https://www.instagram.com/happyhouse201512" target="_blank" rel="noopener noreferrer" aria-label="作品分享｜Instagram"><span class="icon"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></span><span class="copy"><span class="label">作品分享</span></span><span class="arr">›</span></a>
+  <a class="btn threads" href="https://www.threads.com/@happyhouse201512" target="_blank" rel="noopener noreferrer" aria-label="手作日常｜Threads"><span class="icon"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.186 24h-.007c-3.439-.026-6.225-1.175-8.124-3.288-1.902-2.12-2.836-5.095-2.855-8.823-.02-3.726.912-6.71 2.802-8.842C5.908 1.174 8.7.026 12.17 0h.014c3.441.026 6.225 1.175 8.124 3.288 1.902 2.12 2.836 5.095 2.855 8.823.02 3.726-.912 6.71-2.802 8.842C18.277 22.826 15.485 23.974 12.186 24zM12.18 1.46c-2.977.022-5.327.95-6.975 2.758-1.652 1.812-2.456 4.38-2.438 7.635.018 3.254.84 5.816 2.507 7.62 1.663 1.803 4.024 2.72 7.006 2.698 2.977-.022 5.327-.95 6.975-2.758 1.652-1.812 2.456-4.38 2.438-7.635-.018-3.254-.84-5.816-2.507-7.62C17.523 2.355 15.162 1.438 12.18 1.46zm4.958 12.676c-.137 1.999-1.263 3.518-3.075 4.15-1.158.404-2.35.384-3.393-.06-.79-.337-1.41-.89-1.79-1.598-.3-.56-.13-1.147.41-1.39.49-.22 1.02-.02 1.3.47.25.43.63.76 1.14.95.72.27 1.48.25 2.17-.07.9-.41 1.45-1.2 1.52-2.2.06-.9-.28-1.68-.97-2.22-.52-.4-1.16-.6-1.85-.57-.55.03-1.07.19-1.52.48-.28.18-.6.15-.8-.1-.22-.26-.18-.62.1-.82.66-.43 1.42-.67 2.24-.71 1.07-.06 2.05.26 2.84.91 1.05.87 1.55 2.1 1.45 3.53z"/></svg></span><span class="copy"><span class="label">手作日常</span></span><span class="arr">›</span></a>
+  <a class="btn fb" href="https://www.facebook.com/happyhouse20181010" target="_blank" rel="noopener noreferrer" aria-label="最新消息｜Facebook"><span class="icon"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></span><span class="copy"><span class="label">最新消息</span></span><span class="arr">›</span></a>
+  <a class="btn web is-empty" href="#" aria-label="官方網站（即將上線）" aria-disabled="true"><span class="icon"><svg class="site-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 14.5 14.5 9.5M8 7h9v9"/><path d="M18 13v5H6V6h5"/></svg></span><span class="copy"><span class="label">官方網站</span></span><span class="arr">›</span></a>
+  <a class="btn line is-empty" href="#" aria-label="聯絡洽詢｜LINE（即將上線）" aria-disabled="true"><span class="icon"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg></span><span class="copy"><span class="label">聯絡洽詢</span></span><span class="arr">›</span></a>
+</nav>
+<footer class="footer"><p>© 2026 樂樂手創屋｜Happy House</p></footer>
+</main>
+</body>
+</html>
