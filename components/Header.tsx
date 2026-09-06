@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "@/components/ThemeToggle";
 import { site } from "@/lib/content";
 
 const NAV = [
@@ -24,7 +25,7 @@ export default function Header() {
         </Link>
 
         <nav aria-label="主要導覽">
-          <ul className="flex items-center gap-4 sm:gap-7">
+          <ul className="flex items-center gap-3 sm:gap-7">
             {NAV.map((item) => (
               <li
                 key={item.href}
@@ -38,6 +39,9 @@ export default function Header() {
                 </Link>
               </li>
             ))}
+            <li>
+              <ThemeToggle />
+            </li>
             {line && (
               <li>
                 <a

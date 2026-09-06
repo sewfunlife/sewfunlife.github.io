@@ -270,3 +270,47 @@ html.no-js [data-reveal] {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================================================
+   Theme system
+
+   Light is the public default. Dark preserves the original template palette.
+   A warm reading theme is intentionally reserved for a later pass rather than
+   being approximated before its contrast and typography are tuned together.
+   ========================================================================== */
+
+html[data-theme="light"] {
+  color-scheme: light;
+  --color-ink: #f6f7f8;
+  --color-ink-2: #ffffff;
+  --color-ink-3: #eceff1;
+  --color-line: #d9dde1;
+  --color-line-2: #c4c9cf;
+  --color-bone: #17191c;
+  --color-bone-2: #51565d;
+  --color-bone-3: #7a8088;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --color-ink: #08090a;
+  --color-ink-2: #0e1013;
+  --color-ink-3: #15181c;
+  --color-line: #24272c;
+  --color-line-2: #34383e;
+  --color-bone: #e9e5dd;
+  --color-bone-2: #9b9da1;
+  --color-bone-3: #6a6d72;
+}
+
+.theme-icon-dark {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-icon-light {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-icon-dark {
+  display: block;
+}

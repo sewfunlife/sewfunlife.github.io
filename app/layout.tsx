@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Reveal from "@/components/Reveal";
 import RevealScript from "@/components/RevealScript";
+import ThemeScript from "@/components/ThemeScript";
 import { site } from "@/lib/content";
 import { archivo, syne } from "@/lib/fonts";
 import "./globals.css";
@@ -33,8 +34,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#08090A",
-  colorScheme: "dark",
+  themeColor: "#f6f7f8",
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
@@ -43,10 +44,12 @@ export default function RootLayout({
   return (
     <html
       lang="zh-Hant"
+      data-theme="light"
       suppressHydrationWarning
       className={`no-js ${syne.variable} ${archivo.variable}`}
     >
       <head>
+        <ThemeScript />
         <RevealScript />
       </head>
       <body>
