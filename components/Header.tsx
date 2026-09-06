@@ -1,11 +1,12 @@
 import Link from "next/link";
+import MobileMenu from "@/components/MobileMenu";
 import ThemeToggle from "@/components/ThemeToggle";
 import { site } from "@/lib/content";
 
 const NAV = [
-  { label: "課程", href: "/#work", compact: true },
-  { label: "服務", href: "/#services", compact: false },
-  { label: "關於", href: "/#about", compact: true },
+  { label: "課程", href: "/#work" },
+  { label: "服務", href: "/#services" },
+  { label: "關於", href: "/#about" },
 ];
 
 export default function Header() {
@@ -24,16 +25,18 @@ export default function Header() {
           <span className="hidden sm:inline">{site.name}</span>
         </Link>
 
-        <nav aria-label="主要導覽">
-          <ul className="flex items-center gap-3 sm:gap-7">
+        <div className="flex items-center gap-1 sm:hidden">
+          <ThemeToggle />
+          <MobileMenu items={NAV} line={line} />
+        </div>
+
+        <nav aria-label="主要導覽" className="hidden sm:block">
+          <ul className="flex items-center gap-7">
             {NAV.map((item) => (
-              <li
-                key={item.href}
-                className={item.compact ? undefined : "hidden sm:block"}
-              >
+              <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="flex min-h-11 items-center text-[length:var(--text-micro)] tracking-[0.16em] text-bone-2 uppercase transition-colors hover:text-bone sm:tracking-[0.18em]"
+                  className="flex min-h-11 items-center text-[length:var(--text-micro)] tracking-[0.18em] text-bone-2 uppercase transition-colors hover:text-bone"
                 >
                   {item.label}
                 </Link>
@@ -48,7 +51,7 @@ export default function Header() {
                   href={line}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex min-h-9 items-center border border-line-2 px-3 text-[length:var(--text-micro)] tracking-[0.14em] text-bone uppercase transition-colors hover:border-bone hover:bg-bone hover:text-ink sm:tracking-[0.18em]"
+                  className="flex min-h-9 items-center border border-line-2 px-3 text-[length:var(--text-micro)] tracking-[0.18em] text-bone uppercase transition-colors hover:border-bone hover:bg-bone hover:text-ink"
                 >
                   聯絡
                 </a>
