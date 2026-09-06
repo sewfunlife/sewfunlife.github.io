@@ -57,11 +57,11 @@ export default function Home() {
             {total > 0 && (
               <dl className="u-numeric flex gap-10 text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
                 <div className="flex flex-col gap-1.5">
-                  <dt className="sr-only">項目</dt>
+                  <dt className="sr-only">課程</dt>
                   <dd className="text-[length:var(--text-h3)] tracking-normal text-bone">
                     {String(projects.length).padStart(2, "0")}
                   </dd>
-                  <dt aria-hidden="true">項目</dt>
+                  <dt aria-hidden="true">課程</dt>
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <dt className="sr-only">圖片</dt>
@@ -93,9 +93,9 @@ export default function Home() {
       <section id="work" className="scroll-mt-20 py-[var(--spacing-section)]">
         <div className="u-shell">
           <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-            <h2 className="u-eyebrow">作品與課程</h2>
+            <h2 className="u-eyebrow">課程</h2>
             <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-              {String(projects.length).padStart(2, "0")} 項
+              {String(projects.length).padStart(2, "0")} 門課程
             </span>
           </div>
 
@@ -105,7 +105,7 @@ export default function Home() {
                 key={project.slug}
                 data-reveal
                 /* Offset every second entry so the index reads as a hang
-                   rather than a spreadsheet. */
+                   rather than a spreadsheet. */}
                 className={i % 2 === 1 ? "lg:mt-[clamp(3rem,9vw,8rem)]" : undefined}
               >
                 <ProjectCard project={project} priority={i === 0} />
