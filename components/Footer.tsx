@@ -38,7 +38,7 @@ export default function Footer() {
         </ul>
 
         <div className="mt-14 border-t border-line pt-7 text-left text-[length:var(--text-micro)] tracking-[0.14em] text-bone-3 uppercase">
-          © {year} {site.name}｜{site.role}
+          © {year} {site.name}｜Sew Fun Life
         </div>
       </div>
     </footer>

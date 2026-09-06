@@ -9,7 +9,7 @@ const NAV = [
 
 export default function Header() {
   const firstName = site.name.trim().split(/\s+/)[0] ?? site.name;
-  const instagram = site.social.instagram;
+  const line = site.social.line;
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-ink/85 backdrop-blur-md">
@@ -38,12 +38,12 @@ export default function Header() {
                 </Link>
               </li>
             ))}
-            {(site.email || instagram) && (
+            {line && (
               <li>
                 <a
-                  href={site.email ? `mailto:${site.email}` : instagram}
-                  target={!site.email && instagram ? "_blank" : undefined}
-                  rel={!site.email && instagram ? "noreferrer" : undefined}
+                  href={line}
+                  target="_blank"
+                  rel="noreferrer"
                   className="flex min-h-9 items-center border border-line-2 px-3 text-[length:var(--text-micro)] tracking-[0.14em] text-bone uppercase transition-colors hover:border-bone hover:bg-bone hover:text-ink sm:tracking-[0.18em]"
                 >
                   聯絡
