@@ -72,7 +72,7 @@ export default async function ProjectPage({
             href="/#work"
             className="u-eyebrow inline-block transition-colors hover:text-bone"
           >
-            ← All work
+            ← 返回作品
           </Link>
 
           <h1 className="u-display mt-8 text-[length:var(--text-h1)] text-bone" data-reveal>
@@ -84,9 +84,6 @@ export default async function ProjectPage({
             data-reveal
           >
             <span className="u-eyebrow">{project.discipline}</span>
-            <span className="u-eyebrow">
-              {project.kind === "moodboard" ? "Mood board" : "Campaign"}
-            </span>
           </div>
 
           <p
@@ -156,9 +153,7 @@ export default async function ProjectPage({
           <div data-reveal>
             {project.summary && (
               <>
-                <h2 className="u-eyebrow">
-                  {project.kind === "moodboard" ? "Case study" : "Project overview"}
-                </h2>
+                <h2 className="u-eyebrow">課程說明</h2>
                 <p className="u-prose mt-7 max-w-[58ch]">{project.summary}</p>
               </>
             )}
@@ -249,7 +244,7 @@ export default async function ProjectPage({
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <h2 className="u-eyebrow" data-reveal>
-              Platform at a glance
+              課程資訊
             </h2>
             <ul className="mt-10 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
               {project.facts.map((fact) => (
@@ -378,7 +373,7 @@ export default async function ProjectPage({
             className="group block py-[var(--spacing-section)] transition-colors hover:bg-ink-2"
           >
             <div className="u-shell">
-              <span className="u-eyebrow">Next project</span>
+              <span className="u-eyebrow">下一個作品</span>
               <h2 className="u-display mt-5 text-[length:var(--text-h1)] text-bone transition-opacity group-hover:opacity-60">
                 {next.displayTitle}
               </h2>
