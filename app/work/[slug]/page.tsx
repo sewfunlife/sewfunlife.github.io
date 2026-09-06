@@ -325,7 +325,7 @@ export default async function ProjectPage({
             <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
               <h2 className="u-eyebrow">課程花絮</h2>
               <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-                {String(plates.length).padStart(2, "0")} 張
+                {plates.length} 張
               </span>
             </div>
 
@@ -351,7 +351,7 @@ export default async function ProjectPage({
             <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
               <h2 className="u-eyebrow">應用展示</h2>
               <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-                {String(applications.length).padStart(2, "0")} 項
+                {applications.length} 項
               </span>
             </div>
 
