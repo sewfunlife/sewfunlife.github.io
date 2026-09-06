@@ -9,7 +9,6 @@ import {
   site,
 } from "@/lib/content";
 
-/** A handful of plates from across the archive, for the about mosaic. */
 function mosaic() {
   return projects
     .flatMap((project) => assets(project.slug, "mood").slice(0, 1))
@@ -24,9 +23,6 @@ export default function Home() {
 
   return (
     <>
-      {/* ---------------------------------------------------------------- */}
-      {/* Hero                                                              */}
-      {/* ---------------------------------------------------------------- */}
       <section className="pt-[clamp(3rem,10vh,7rem)] pb-[clamp(2.5rem,6vh,4.5rem)]">
         <div className="u-shell">
           <p className="u-eyebrow" data-reveal>
@@ -75,9 +71,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* The signature: every colour specified across every project, as one
-            continuous band. Full-bleed, so it reads as an object rather than a
-            component sitting inside the layout. */}
         <div
           className="mt-[clamp(3rem,8vh,6rem)] px-[var(--spacing-gutter)]"
           data-reveal
@@ -87,9 +80,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Work                                                              */}
-      {/* ---------------------------------------------------------------- */}
       <section id="work" className="scroll-mt-20 py-[var(--spacing-section)]">
         <div className="u-shell">
           <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
@@ -104,8 +94,6 @@ export default function Home() {
               <div
                 key={project.slug}
                 data-reveal
-                /* Offset every second entry so the index reads as a hang
-                   rather than a spreadsheet. */}
                 className={i % 2 === 1 ? "lg:mt-[clamp(3rem,9vw,8rem)]" : undefined}
               >
                 <ProjectCard project={project} priority={i === 0} />
@@ -115,9 +103,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------------------------------------------------------- */}
-      {/* Services                                                          */}
-      {/* ---------------------------------------------------------------- */}
       {site.services.length > 0 && (
         <section
           id="services"
@@ -148,9 +133,6 @@ export default function Home() {
         </section>
       )}
 
-      {/* ---------------------------------------------------------------- */}
-      {/* About                                                             */}
-      {/* ---------------------------------------------------------------- */}
       <section
         id="about"
         className="scroll-mt-20 border-t border-line py-[var(--spacing-section)]"
