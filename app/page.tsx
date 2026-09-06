@@ -55,7 +55,7 @@ export default function Home() {
                 <div className="flex flex-col gap-1.5">
                   <dt className="sr-only">課程</dt>
                   <dd className="text-[length:var(--text-h3)] tracking-normal text-bone">
-                    {String(projects.length).padStart(2, "0")}
+                    {projects.length}
                   </dd>
                   <dt aria-hidden="true">課程</dt>
                 </div>
