@@ -47,7 +47,7 @@ function parseFact(fact: string) {
 }
 
 function FactIcon({ label }: { label: string }) {
-  const common = "h-5 w-5 shrink-0 text-bone-3";
+  const common = "h-4 w-4 shrink-0 text-bone-3";
 
   if (label === "難易程度") {
     return (
@@ -72,6 +72,15 @@ function FactIcon({ label }: { label: string }) {
         <circle cx="9" cy="9" r="3" />
         <circle cx="16.5" cy="10" r="2.5" />
         <path d="M3.5 19c.7-3.3 2.7-5 5.5-5s4.8 1.7 5.5 5M14 14.5c3.2-.4 5.3 1.1 6 4.5" />
+      </svg>
+    );
+  }
+
+  if (label === "成品內容") {
+    return (
+      <svg className={common} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="8.5" />
+        <path d="m8.5 12 2.3 2.3 4.8-5" />
       </svg>
     );
   }
@@ -322,11 +331,8 @@ export default async function ProjectPage({
       {plates.length > 0 && (
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
-            <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
+            <div className="border-b border-line pb-6">
               <h2 className="u-eyebrow">課程花絮</h2>
-              <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-                {plates.length} 張
-              </span>
             </div>
 
             <div className="mt-10 grid grid-cols-2 items-start gap-x-[clamp(0.75rem,2.5vw,2.5rem)] gap-y-[clamp(1.75rem,5vw,4.5rem)] sm:mt-12 lg:grid-cols-3">
