@@ -70,7 +70,7 @@ export default function Footer() {
       <div className="u-shell py-[var(--spacing-section)]">
         <p className="u-eyebrow">課程邀約・合作・報名</p>
 
-        <ul className="mt-7 flex flex-wrap items-center gap-2.5">
+        <ul className="mt-7 flex flex-wrap items-center gap-5">
           {links.map((link) => (
             <li key={link.label}>
               <a
@@ -79,7 +79,7 @@ export default function Footer() {
                 title={link.label}
                 target={link.href.startsWith("http") ? "_blank" : undefined}
                 rel={link.href.startsWith("http") ? "noreferrer" : undefined}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-line-2 text-bone-2 transition-colors hover:border-bone hover:bg-bone hover:text-ink"
+                className="flex h-6 w-6 items-center justify-center text-bone-2 transition-colors hover:text-bone"
               >
                 <SocialIcon label={link.label} />
               </a>
