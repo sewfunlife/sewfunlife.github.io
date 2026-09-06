@@ -2,7 +2,7 @@ import Link from "next/link";
 import { site } from "@/lib/content";
 
 const NAV = [
-  { label: "作品", href: "/#work", compact: true },
+  { label: "課程", href: "/#work", compact: true },
   { label: "服務", href: "/#services", compact: false },
   { label: "關於", href: "/#about", compact: true },
 ];

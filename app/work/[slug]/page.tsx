@@ -69,7 +69,7 @@ export default async function ProjectPage({
             href="/#work"
             className="u-eyebrow inline-block transition-colors hover:text-bone"
           >
-            ← 返回作品
+            ← 返回課程
           </Link>
 
           <h1 className="u-display mt-8 text-[length:var(--text-h1)] text-bone" data-reveal>
@@ -247,7 +247,7 @@ export default async function ProjectPage({
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-              <h2 className="u-eyebrow">作品圖片</h2>
+              <h2 className="u-eyebrow">課程花絮</h2>
               <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
                 {String(plates.length).padStart(2, "0")} 張
               </span>
@@ -332,7 +332,7 @@ export default async function ProjectPage({
             className="group block py-[var(--spacing-section)] transition-colors hover:bg-ink-2"
           >
             <div className="u-shell">
-              <span className="u-eyebrow">下一個作品</span>
+              <span className="u-eyebrow">下一個課程</span>
               <h2 className="u-display mt-5 text-[length:var(--text-h1)] text-bone transition-opacity group-hover:opacity-60">
                 {next.displayTitle}
               </h2>
