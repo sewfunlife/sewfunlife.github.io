@@ -43,9 +43,7 @@ export default function ChromaticIndex({
           {current ? current.project : `${entries.length} 種色彩`}
         </span>
         <span aria-hidden="true" className="tracking-[0.12em] uppercase">
-          {current
-            ? current.hex
-            : `${String(projectCount).padStart(2, "0")} 門課程`}
+          {current ? current.hex : `${projectCount} 門課程`}
         </span>
       </div>
     </div>
