@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>布有趣｜微風按鈕 Preview</title>
+<style>
+html,body{margin:0;min-height:100%;background:#cfe9f7;font-family:system-ui,sans-serif}.loading{min-height:100vh;display:grid;place-items:center;color:#607664;font-size:14px;letter-spacing:.06em}
+</style>
+</head>
+<body>
+<div class="loading">載入正式版底稿…</div>
+<script>
+(async()=>{
+  try{
+    const res=await fetch('./index.html',{cache:'no-store'});
+    if(!res.ok) throw new Error('HTTP '+res.status);
+    let html=await res.text();
+    const breeze=`
+<style id="button-breeze-preview">
+.btn{
+  transform-origin:center;
+  animation:up .65s var(--ease) forwards,buttonBreeze var(--breeze-duration,12s) ease-in-out infinite;
+}
+.btn:nth-child(1){animation-delay:.10s,2.0s;--breeze-duration:11.8s}
+.btn:nth-child(2){animation-delay:.18s,4.6s;--breeze-duration:12.7s}
+.btn:nth-child(3){animation-delay:.26s,7.1s;--breeze-duration:13.4s}
+.btn:nth-child(4){animation-delay:.34s,3.3s;--breeze-duration:12.1s}
+.btn:nth-child(5){animation-delay:.42s,8.8s;--breeze-duration:13s}
+@keyframes buttonBreeze{
+  0%,70%,100%{rotate:0deg}
+  76%{rotate:-.55deg}
+  82%{rotate:.42deg}
+  87%{rotate:-.20deg}
+  92%{rotate:0deg}
+}
+@media(prefers-reduced-motion:reduce){.btn{animation:none!important;opacity:1!important;rotate:0deg!important}}
+</style>`;
+    html=html.replace('</head>',breeze+'</head>');
+    document.open();
+    document.write(html);
+    document.close();
+  }catch(err){
+    document.body.innerHTML='<div class="loading">Preview 載入失敗：'+String(err.message||err)+'</div>';
+  }
+})();
+</script>
+</body>
+</html>
