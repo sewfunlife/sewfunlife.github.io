@@ -5,6 +5,7 @@
   "description": "A static, image-forward portfolio template for graphic designers. Built with Next.js, deploys to Netlify or Cloudflare Pages.",
   "scripts": {
     "seed": "node scripts/seed.mjs",
+    "content:read": "node scripts/content/sheets-reader.mjs",
     "predev": "npm run seed",
     "dev": "next dev",
     "prebuild": "npm run seed",
