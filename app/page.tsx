@@ -138,7 +138,7 @@ export default function Home() {
           <div data-reveal>
             <h2 className="u-eyebrow">關於布有趣</h2>
             <p className="u-display mt-8 whitespace-nowrap text-[clamp(1.25rem,5.4vw,1.75rem)] leading-[1.15] text-bone">
-              看得懂、跟得上、做得好。
+              看得懂、跟得上、做得到，還能帶得走。
             </p>
             <div className="mt-7 flex flex-col gap-6">
               {[...site.intro, ...site.about].map((paragraph, i) => (
