@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { projects, site } from "@/lib/content";
+import { courses, site } from "@/lib/content";
 
 /** Required by `output: "export"` — the file is written once, at build time. */
 export const dynamic = "force-static";
@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     { url: `${base}/`, priority: 1, changeFrequency: "monthly" },
-    ...projects.map((project) => ({
+    ...courses.map((project) => ({
       url: `${base}/work/${project.slug}/`,
       priority: 0.8,
       changeFrequency: "yearly" as const,

@@ -1,27 +1,23 @@
 import Link from "next/link";
 import { heroAsset } from "@/lib/content";
 import { srcSetFor } from "@/lib/images";
-import type { Project } from "@/lib/types";
+import type { Course } from "@/lib/types";
+import { difficulty as difficultyFor, duration as durationFor } from "@/lib/course-display";
 
-function factValue(project: Project, label: string) {
-  const fact = project.facts.find((item) => item.startsWith(`${label}｜`));
-  return fact ? fact.slice(label.length + 1) : "";
-}
-
-export default function ProjectCard({
-  project,
+export default function CourseCard({
+  course,
   priority = false,
 }: {
-  project: Project;
+  course: Course;
   priority?: boolean;
 }) {
-  const asset = heroAsset(project.slug);
-  const difficulty = factValue(project, "難易程度");
-  const duration = factValue(project, "課程時間");
+  const asset = heroAsset(course.slug);
+  const difficulty = difficultyFor(course);
+  const duration = durationFor(course);
 
   return (
     <article className="group">
-      <Link href={`/work/${project.slug}`} className="block">
+      <Link href={`/work/${course.slug}`} className="block">
         <div
           className="relative overflow-hidden bg-ink-2"
           style={{
@@ -37,7 +33,7 @@ export default function ProjectCard({
               sizes="(min-width: 1024px) 46vw, 92vw"
               width={asset.w}
               height={asset.h}
-              alt={`${project.title} — ${project.discipline}`}
+              alt={asset.label}
               loading={priority ? "eager" : "lazy"}
               decoding={priority ? "sync" : "async"}
               fetchPriority={priority ? "high" : "auto"}
@@ -47,7 +43,7 @@ export default function ProjectCard({
         </div>
 
         <h3 className="u-display mt-5 text-[length:var(--text-h2)] text-bone transition-opacity group-hover:opacity-60">
-          {project.displayTitle}
+          {course.title}
         </h3>
 
         <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-2 text-[length:var(--text-meta)] text-bone-2">

@@ -1,23 +1,20 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Palette from "@/components/Palette";
 import Plate from "@/components/Plate";
-import Specimen from "@/components/Specimen";
 import {
-  assets,
-  getProject,
+  getCourse,
   heroAsset,
   neighbours,
-  projects,
+  courses,
   site,
   wall,
 } from "@/lib/content";
-import { specimenClassNames } from "@/lib/fonts";
+import { courseFacts } from "@/lib/course-display";
 import { srcSetFor } from "@/lib/images";
 
 export function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return courses.map((course) => ({ slug: course.slug }));
 }
 
 export async function generateMetadata({
@@ -26,24 +23,19 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const project = getProject(slug);
-  if (!project) return {};
+  const course = getCourse(slug);
+  if (!course) return {};
 
   const hero = heroAsset(slug);
   return {
-    title: project.title,
-    description: project.summary || project.tagline,
+    title: course.title,
+    description: course.description || course.short_description || undefined,
     openGraph: {
-      title: `${project.title} — ${site.name}`,
-      description: project.summary || project.tagline,
+      title: `${course.title} — ${site.name}`,
+      description: course.description || course.short_description || undefined,
       images: hero ? [{ url: hero.src, width: hero.w, height: hero.h }] : undefined,
     },
   };
-}
-
-function parseFact(fact: string) {
-  const [label, ...rest] = fact.split("｜");
-  return { label, value: rest.join("｜") };
 }
 
 function FactIcon({ label }: { label: string }) {
@@ -102,28 +94,30 @@ function FactIcon({ label }: { label: string }) {
   );
 }
 
-export default async function ProjectPage({
+export default async function CoursePage({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const project = getProject(slug);
-  if (!project) notFound();
+  const course = getCourse(slug);
+  if (!course) notFound();
 
   const hero = heroAsset(slug);
-  const plates = wall(project);
-  const applications = assets(slug, "app");
-  const deck = assets(slug, "deck");
+  const plates = wall(course);
   const { next } = neighbours(slug);
-
-  const hasSpec =
-    project.palette.length > 0 ||
-    project.typography.length > 0 ||
-    project.keywords.length > 0;
+  const facts = courseFacts(course);
+  const sections = [
+    { heading: '課程特色', body: course.highlights?.join('\n') },
+    { heading: '適合對象', body: course.audience },
+    { heading: '年齡／年級限制', body: course.age_rule },
+    { heading: '場地需求', body: course.venue_requirements },
+    { heading: '設備需求', body: course.equipment_requirements },
+    { heading: '邀約提醒', body: course.inquiry_note },
+  ].filter((s): s is { heading: string; body: string } => !!s.body);
 
   return (
-    <div className={specimenClassNames}>
+    <div>
       <section className="pt-[clamp(2.5rem,7vh,5rem)]">
         <div className="u-shell">
           <Link
@@ -134,42 +128,23 @@ export default async function ProjectPage({
           </Link>
 
           <h1 className="u-display mt-8 text-[length:var(--text-h1)] text-bone" data-reveal>
-            {project.displayTitle}
+            {course.title}
           </h1>
 
           <div
             className="mt-7 flex flex-wrap items-baseline gap-x-8 gap-y-3 border-b border-line pb-7"
             data-reveal
           >
-            <span className="u-eyebrow">{project.discipline}</span>
+            <span className="u-eyebrow">{course.category}</span>
           </div>
 
           <p
             className="u-prose mt-8 max-w-[40ch] text-[length:var(--text-h3)] leading-snug text-bone"
             data-reveal
           >
-            {project.tagline}
+            {course.short_description}
           </p>
         </div>
-
-        {project.palette.length > 0 && (
-          <div
-            className="mt-[clamp(2.5rem,6vh,4rem)] flex h-3 w-full"
-            aria-hidden="true"
-            data-reveal
-          >
-            {project.palette.map((swatch) => (
-              <span
-                key={swatch.hex}
-                className="h-full flex-1"
-                style={{
-                  backgroundColor: swatch.hex,
-                  boxShadow: "inset 0 0 0 1px rgba(233,229,221,0.10)",
-                }}
-              />
-            ))}
-          </div>
-        )}
       </section>
 
       {hero && (
@@ -186,7 +161,7 @@ export default async function ProjectPage({
               sizes="92vw"
               width={hero.w}
               height={hero.h}
-              alt={`${project.title} — ${hero.label}`}
+              alt={hero.label}
               loading="eager"
               decoding="sync"
               fetchPriority="high"
@@ -199,11 +174,11 @@ export default async function ProjectPage({
       <section className="py-[var(--spacing-section)]">
         <div className="u-shell grid gap-x-[clamp(2rem,6vw,6rem)] gap-y-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <div data-reveal>
-            {project.summary && (
+            {course.description && (
               <>
                 <h2 className="u-eyebrow">課程說明</h2>
                 <div className="mt-7 flex max-w-[58ch] flex-col gap-5">
-                  {project.summary.split(/\n{2,}/).map((paragraph, i) => (
+                  {course.description.split(/\n{2,}/).map((paragraph, i) => (
                     <p key={i} className="u-prose whitespace-pre-line">
                       {paragraph}
                     </p>
@@ -212,9 +187,9 @@ export default async function ProjectPage({
               </>
             )}
 
-            {project.sections.length > 0 && (
+            {sections.length > 0 && (
               <div className="mt-14 flex flex-col gap-10">
-                {project.sections.map((section) => {
+                {sections.map((section) => {
                   const items = section.body.split("\n").map((item) => item.trim()).filter(Boolean);
                   return (
                     <div key={section.heading}>
@@ -233,83 +208,21 @@ export default async function ProjectPage({
             )}
           </div>
 
-          {hasSpec && (
-            <div className="flex flex-col gap-14" data-reveal>
-              {project.keywords.length > 0 && (
-                <div>
-                  <h2 className="u-eyebrow">特色</h2>
-                  <ul className="mt-5 flex flex-wrap gap-x-2 gap-y-2">
-                    {project.keywords.map((keyword) => (
-                      <li
-                        key={keyword}
-                        className="border border-line px-3 py-1.5 text-[length:var(--text-micro)] tracking-[0.14em] text-bone-2 uppercase"
-                      >
-                        {keyword}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-
-              {project.typography.length > 0 && (
-                <div>
-                  <h2 className="u-eyebrow">字體</h2>
-                  <div className="mt-5">
-                    <Specimen specs={project.typography} />
-                  </div>
-                </div>
-              )}
-
-              {project.palette.length > 0 && (
-                <div>
-                  <h2 className="u-eyebrow">色彩</h2>
-                  <div className="mt-5">
-                    <Palette swatches={project.palette} />
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
         </div>
       </section>
 
-      {project.steps.length > 0 && (
-        <section className="border-t border-line py-[var(--spacing-section)]">
-          <div className="u-shell">
-            <h2 className="u-eyebrow" data-reveal>
-              製作流程
-            </h2>
-            <ol className="mt-12 grid gap-px border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
-              {project.steps.map((step) => (
-                <li key={step.n} className="bg-ink p-7" data-reveal>
-                  <span className="u-numeric block text-[length:var(--text-h3)] text-bone-3">
-                    {step.n}
-                  </span>
-                  <h3 className="u-display mt-5 text-[length:var(--text-lead)] text-bone">
-                    {step.title}
-                  </h3>
-                  <p className="u-label-caption mt-3 text-[length:var(--text-body)]">
-                    {step.body}
-                  </p>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-      )}
-
-      {project.facts.length > 0 && (
+      {facts.length > 0 && (
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <h2 className="u-eyebrow" data-reveal>
               課程資訊
             </h2>
             <ul className="mt-10 grid gap-x-10 gap-y-5 sm:grid-cols-2 lg:grid-cols-4">
-              {project.facts.map((fact) => {
-                const { label, value } = parseFact(fact);
+              {facts.map((fact) => {
+                const { label, value } = fact;
                 return (
                   <li
-                    key={fact}
+                    key={label}
                     className="border-t border-line pt-4"
                     data-reveal
                   >
@@ -332,7 +245,7 @@ export default async function ProjectPage({
         <section className="border-t border-line py-[var(--spacing-section)]">
           <div className="u-shell">
             <div className="border-b border-line pb-6">
-              <h2 className="u-eyebrow">課程花絮</h2>
+              <h2 className="u-eyebrow">作品展示</h2>
             </div>
 
             <div className="mt-10 grid grid-cols-2 items-start gap-x-[clamp(0.75rem,2.5vw,2.5rem)] gap-y-[clamp(1.75rem,5vw,4.5rem)] sm:mt-12 lg:grid-cols-3">
@@ -340,65 +253,9 @@ export default async function ProjectPage({
                 <div key={asset.src} data-reveal>
                   <Plate
                     asset={asset}
-                    title={asset.plate?.title}
-                    caption={asset.plate?.caption}
+                    title={asset.label}
+                    caption={asset.caption}
                     sizes="(min-width: 1024px) 30vw, 45vw"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {applications.length > 0 && (
-        <section className="border-t border-line py-[var(--spacing-section)]">
-          <div className="u-shell">
-            <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-              <h2 className="u-eyebrow">應用展示</h2>
-              <span className="u-numeric text-[length:var(--text-micro)] tracking-[0.16em] text-bone-3 uppercase">
-                {applications.length} 項
-              </span>
-            </div>
-
-            <div className="mt-10 grid grid-cols-2 items-start gap-x-[clamp(0.75rem,2.5vw,2.5rem)] gap-y-[clamp(1.75rem,5vw,4.5rem)] sm:mt-12">
-              {applications.map((asset) => (
-                <div key={asset.src} data-reveal>
-                  <Plate asset={asset} sizes="(min-width: 640px) 45vw, 45vw" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {deck.length > 0 && (
-        <section className="border-t border-line py-[var(--spacing-section)]">
-          <div className="u-shell">
-            <div className="flex items-baseline justify-between gap-6 border-b border-line pb-6">
-              <h2 className="u-eyebrow">延伸展示</h2>
-              <span className="u-eyebrow lg:hidden">滑動查看 →</span>
-            </div>
-
-            <div className="mt-10 flex flex-col gap-[clamp(1.5rem,4vw,3rem)] sm:mt-12">
-              {deck.map((asset) => (
-                <div
-                  key={asset.src}
-                  data-reveal
-                  className="u-scroll-x -mx-[var(--spacing-gutter)] px-[var(--spacing-gutter)] lg:mx-0 lg:px-0"
-                >
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={asset.src}
-                    srcSet={srcSetFor(asset)}
-                    width={asset.w}
-                    height={asset.h}
-                    alt={`${project.title} — 延伸展示`}
-                    loading="lazy"
-                    decoding="async"
-                    sizes="(min-width: 1024px) 90vw, 1150px"
-                    style={{ backgroundColor: asset.dom }}
-                    className="h-auto w-[1150px] max-w-none lg:w-full"
                   />
                 </div>
               ))}
@@ -416,10 +273,10 @@ export default async function ProjectPage({
             <div className="u-shell">
               <span className="u-eyebrow">下一個課程</span>
               <h2 className="u-display mt-5 text-[length:var(--text-h1)] text-bone transition-opacity group-hover:opacity-60">
-                {next.displayTitle}
+                {next.title}
               </h2>
               <p className="u-label-caption mt-4 max-w-[46ch] text-[length:var(--text-body)]">
-                {next.tagline}
+                {next.short_description}
               </p>
             </div>
           </Link>

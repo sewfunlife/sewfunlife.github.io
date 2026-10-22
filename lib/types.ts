@@ -1,4 +1,4 @@
-/** Shapes of the JSON in `content/`. Edit the JSON, not this file. */
+/** Site configuration and presentation types. Course data comes from Sheets. */
 
 export type Social = {
   instagram?: string;
@@ -40,50 +40,10 @@ export type Site = {
   };
 };
 
-export type Swatch = {
-  hex: string;
-  name?: string;
-};
-
-export type TypeSpec = {
-  family: string;
-  styles: string[];
-};
-
-/** One image in the mood-board wall, with its curator's label. */
-export type Plate = {
-  key: string;
-  title: string;
-  caption: string;
-};
-
-export type Section = {
-  heading: string;
-  body: string;
-};
-
-export type Step = {
-  n: string;
-  title: string;
-  body: string;
-};
-
-export type Project = {
-  slug: string;
-  title: string;
-  displayTitle: string;
-  kind: "moodboard" | "campaign";
-  discipline: string;
-  tagline: string;
-  summary: string;
-  keywords: string[];
-  palette: Swatch[];
-  typography: TypeSpec[];
-  plates: Plate[];
-  sections: Section[];
-  steps: Step[];
-  facts: string[];
-};
+// Unused legacy visual helpers retain their presentation-only types.
+export type Swatch = { hex: string; name?: string };
+export type TypeSpec = { family: string; styles: string[] };
+export type { Course, Media, Session, Instructor, FAQ } from './course-types';
 
 /** One processed image, as emitted by scripts/optimize-images.mjs. */
 export type Asset = {
@@ -99,7 +59,3 @@ export type Asset = {
   /** Real pixel width of `sm` — srcset descriptors must be true widths. */
   smW?: number;
 };
-
-export type AssetCategory = "cover" | "mood" | "app" | "deck";
-
-export type ImageManifest = Record<string, Partial<Record<AssetCategory, Asset[]>>>;

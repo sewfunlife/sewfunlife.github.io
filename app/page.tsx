@@ -1,23 +1,20 @@
-import ChromaticIndex from "@/components/ChromaticIndex";
-import ProjectCard from "@/components/ProjectCard";
+import CourseCard from "@/components/ProjectCard";
 import { srcSetFor } from "@/lib/images";
 import {
   assetCount,
   assets,
-  chromaticIndex,
-  projects,
+  courses,
   site,
 } from "@/lib/content";
 
 function mosaic() {
-  return projects
-    .flatMap((project) => assets(project.slug, "mood").slice(0, 1))
+  return courses
+    .flatMap((course) => assets(course.slug, "work_showcase").slice(0, 1))
     .slice(0, 4);
 }
 
 export default function Home() {
   const nameParts = site.name.split(" ").filter(Boolean);
-  const colours = chromaticIndex();
   const tiles = mosaic();
   const total = assetCount();
 
@@ -55,7 +52,7 @@ export default function Home() {
                 <div className="flex flex-col gap-1.5">
                   <dt className="sr-only">課程</dt>
                   <dd className="text-[length:var(--text-h3)] tracking-normal text-bone">
-                    {projects.length}
+                    {courses.length}
                   </dd>
                   <dt aria-hidden="true">課程</dt>
                 </div>
@@ -70,14 +67,6 @@ export default function Home() {
             )}
           </div>
         </div>
-
-        <div
-          className="mt-[clamp(3rem,8vh,6rem)] px-[var(--spacing-gutter)]"
-          data-reveal
-          style={{ ["--reveal-delay" as string]: "420ms" }}
-        >
-          <ChromaticIndex entries={colours} projectCount={projects.length} />
-        </div>
       </section>
 
       <section id="work" className="scroll-mt-20 py-[var(--spacing-section)]">
@@ -87,13 +76,13 @@ export default function Home() {
           </div>
 
           <div className="mt-[clamp(2.5rem,6vw,5rem)] grid gap-x-[clamp(1.5rem,4vw,4rem)] gap-y-[clamp(3.5rem,9vw,7rem)] lg:grid-cols-2">
-            {projects.map((project, i) => (
+            {courses.map((course, i) => (
               <div
-                key={project.slug}
+                key={course.slug}
                 data-reveal
                 className={i % 2 === 1 ? "lg:mt-[clamp(3rem,9vw,8rem)]" : undefined}
               >
-                <ProjectCard project={project} priority={i === 0} />
+                <CourseCard course={course} priority={i === 0} />
               </div>
             ))}
           </div>

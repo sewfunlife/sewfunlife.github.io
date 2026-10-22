@@ -1,0 +1,49 @@
+{
+  "task": "WORK-2.7E-01",
+  "status": "PARTIAL / BLOCKED-LIVE-VERIFY",
+  "dependency_install": {
+    "command": "npm ci",
+    "exit": 0,
+    "new_adapter_dependencies": 0
+  },
+  "unit_tests": {
+    "command": "npm test",
+    "pass": 59,
+    "fail": 0
+  },
+  "lint": {
+    "command": "npm run lint",
+    "exit": 0
+  },
+  "typecheck": {
+    "command": "npm run typecheck",
+    "exit": 0
+  },
+  "content_validate": {
+    "source": "connector-snapshot",
+    "exit": 0
+  },
+  "fixture_build": {
+    "command": "npm run build:fixture",
+    "exit": 0
+  },
+  "snapshot_build": {
+    "command": "npm run build:snapshot -- <private-local-snapshot>",
+    "exit": 0
+  },
+  "production_build": {
+    "command": "npm run build",
+    "exit": 1,
+    "expected": "Missing three build-time secrets; stopped before Next build"
+  },
+  "service_account_live_integration": "NOT VERIFIED",
+  "sheet_correction": {
+    "range": "網站_Courses!AG6:AG7",
+    "values_cleared": true,
+    "AF_unchanged": true,
+    "AG_format_preserved": true,
+    "authorization": "User explicitly approved in this conversation"
+  },
+  "browser_qa": "NOT VERIFIED: missing Chromium executable; download failed",
+  "deployment": "NOT EXECUTED"
+}

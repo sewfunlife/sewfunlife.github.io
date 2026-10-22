@@ -54,3 +54,11 @@ yarn-error.log*
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+# Build-time Sheet data, receipts and credentials
+/content/generated/
+/.cache/
+.env*
+*service-account*.json
+*credentials*.json
+*.key

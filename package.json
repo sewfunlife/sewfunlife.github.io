@@ -5,15 +5,22 @@
   "description": "A static, image-forward portfolio template for graphic designers. Built with Next.js, deploys to Netlify or Cloudflare Pages.",
   "scripts": {
     "seed": "node scripts/seed.mjs",
-    "predev": "npm run seed",
+    "predev": "node scripts/dev-prepare.mjs",
     "dev": "next dev",
-    "prebuild": "npm run seed",
-    "build": "next build",
+    "prebuild": "npm run seed && npm run content:sync && npm run content:validate",
+    "build": "node scripts/build-production.mjs",
     "preview": "npx --yes serve out",
     "lint": "eslint",
     "typecheck": "tsc --noEmit",
     "images": "node scripts/optimize-images.mjs",
-    "placeholders": "node scripts/make-placeholders.mjs"
+    "placeholders": "node scripts/make-placeholders.mjs",
+    "content:sync": "node scripts/content.mjs sync",
+    "content:validate": "node scripts/content.mjs validate",
+    "content:fixture": "node scripts/content.mjs fixture",
+    "content:snapshot": "node scripts/content.mjs snapshot",
+    "test": "node --test tests/*.test.mjs",
+    "build:fixture": "node scripts/build-local.mjs",
+    "build:snapshot": "node scripts/build-local.mjs"
   },
   "dependencies": {
     "next": "16.2.12",

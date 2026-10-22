@@ -1,0 +1,39 @@
+{
+  "source": "connector-snapshot",
+  "counts": {
+    "courses": 3,
+    "media": 5,
+    "sessions": 0,
+    "instructors": 0,
+    "faq": 0
+  },
+  "pages": [
+    {
+      "route": "/work/paracord-drink-carrier/",
+      "title": true,
+      "homeLink": true,
+      "returnLink": true,
+      "cover": true,
+      "showcase": 1
+    },
+    {
+      "route": "/work/leather-dog-keychain-charm/",
+      "title": true,
+      "homeLink": true,
+      "returnLink": true,
+      "cover": true,
+      "showcase": 1
+    },
+    {
+      "route": "/work/leather-seal-box/",
+      "title": true,
+      "homeLink": true,
+      "returnLink": true,
+      "cover": true,
+      "showcase": 0
+    }
+  ],
+  "staticFilesScanned": 59,
+  "privacyScan": true,
+  "browserVisualQA": "NOT VERIFIED: Chromium unavailable"
+}
