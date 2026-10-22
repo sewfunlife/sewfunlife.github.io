@@ -1,0 +1,20 @@
+{
+  "observed_commit": "a494db2de9f9d02ff4c4143985fd395e6d6f79f7",
+  "deployment": "dpl_4zbdgZTsSpWv1uq1ioRdp5qfHsnd",
+  "source": "git",
+  "branch": "work/2.7e-01-build-adapter-preflight",
+  "target": null,
+  "state": "ERROR",
+  "errorCode": "BUILD_UTILS_SPAWN_1",
+  "command": "npm run build",
+  "exit": 1,
+  "stop_step": "content:sync",
+  "missing_secret_names": [
+    "SEWFUNLIFE_SPREADSHEET_ID",
+    "GOOGLE_SERVICE_ACCOUNT_EMAIL",
+    "GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY"
+  ],
+  "manual_deployment": false,
+  "settings_changed": false,
+  "log_url": "https://vercel.com/whynot-tws-projects/sewfunlife-github-io/4zbdgZTsSpWv1uq1ioRdp5qfHsnd"
+}

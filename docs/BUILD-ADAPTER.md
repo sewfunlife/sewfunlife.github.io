@@ -53,4 +53,4 @@ fixture／snapshot 指令在 CI、GitHub Actions、Vercel 或 NODE_ENV=productio
 
 ## 部署邊界
 
-本任務只在隔離分支保存；不自動 merge、部署或宣告 Stage PASS。Pages workflow 只在原有 main push／手動 dispatch 執行。Vercel 的三個環境變數須獨立配置；本輪未設定平台 Secrets，也未觸發任何部署。
+本任務只在隔離分支保存；不自動 merge、部署或宣告 Stage PASS。Pages workflow 只在原有 main push／手動 dispatch 執行。Vercel 的三個環境變數須獨立配置；本輪未設定平台 Secrets，也未手動部署；既有 Vercel Git 整合會自動嘗試 Preview，實際狀態見施工結果報告。

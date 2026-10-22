@@ -9,7 +9,7 @@
 - Final commit（最後程式／測試版本）：`fff8481deab1d6c217d83bd8909d086843d165b7`
 - 本結果報告另以 docs-only commit 保存；以 `git log -1 --format=%H -- docs/Sewfunlife_site_WORK-2.7E-01_RESULT.md` 取得，完整報告提交 SHA 同步列於 Drive 交付副本。
 - Stage Gate：**未宣告 Stage 2.7E PASS**。
-- 未 merge main、未部署、未觸發 GitHub Actions／Vercel 發布。
+- 未 merge main、未手動部署或發布 Production；既有 Vercel Git 整合自動嘗試 Preview，因缺 secrets 失敗（詳見下節）。
 
 ## 結論
 
@@ -104,6 +104,7 @@ GitHub main 與派工基準一致；原始資料筆數與 99 個 Schema 欄位�
 | 非 live receipt 滿足 production | 正確拒絕 |
 | Service Account 真實 live sync | BLOCKED，缺本機 credential |
 | GitHub Actions 真實執行 | 未觸發／未驗收 |
+| Vercel 自動 Preview | ERROR；缺三個指定 secrets，fail-fast 生效 |
 | 瀏覽器手機／桌機 QA | 未驗證，缺 Chromium |
 
 測試包含 duplicate 各模型 ID／slug、日期與數值錯誤、FK、缺欄、Schema privacy 降級、Terms 停用／未知值、禁止恢復 session_photo、未公開父層、隱私媒體排除、private 欄位注入、receipt 竄改、失敗清除舊結果、CI 拒絕 fixture，以及合成 JWT 簽名與七表限定讀取。測試只在記憶體產生合成 RSA key，沒有提交真實憑證。
@@ -175,13 +176,13 @@ GitHub main 與派工基準一致；原始資料筆數與 99 個 Schema 欄位�
 
 ## Blockers / Known risks / Deviations
 
-1. 缺 Service Account 憑證，沒有完成原任務指定的 live sync／正式 pipeline 驗收。
+1. 缺 Service Account 憑證，沒有完成原任務指定的 live sync／正式 pipeline 驗收；Vercel Preview 亦已由實際日誌確認缺少三個指定環境變數。
 2. GitHub repository Secrets 配置與 Actions 執行未驗證；合併前必須處理，不能把本地 snapshot build 當作正式 build PASS。
 3. 瀏覽器 QA 未完成；外部圖片實際載入、手機操作、RWD 與互動不得宣稱 PASS。
 4. 現有 Framer URL、migration 1200×1200 及空白 ALT／文案仍按原範圍保留，未擴張素材搬遷。
 5. 唯一 Sheet 修改是 Owner 額外明確核准的 AG6:AG7 清值。
 6. 治理 Stage PASS 狀態未修改；由驗收 AI 讀真實分支與本報告後更新 Control／State／Pending Inputs。
-7. 未大量匯入歷史課程、未改 ID／Workbook／正式 privacy 規則、未 merge 或部署。
+7. 未大量匯入歷史課程、未改 ID／Workbook／正式 privacy 規則、未 merge 或手動發布 Production。
 
 ## Recommended next action
 
@@ -189,3 +190,17 @@ GitHub main 與派工基準一致；原始資料筆數與 99 個 Schema 欄位�
 - 驗收 AI 讀本分支最新程式與本報告，執行真實 content:sync → validate → npm run build，確認 3／5／0／0／0 及 private 剔除。
 - 補做可用瀏覽器的三個課程頁與手機／桌機檢查。
 - 驗收後才決定是否 Stage 2.7E PASS、更新治理、建立合併／部署後續任務；本輪到隔離分支保存即停止。
+
+## 提交後 Vercel 自動 Preview 讀回
+
+使用 Vercel 部署檢查技能唯讀核對既有 Git 整合：
+
+- 被檢查 commit：`a494db2de9f9d02ff4c4143985fd395e6d6f79f7`
+- Deployment：`dpl_4zbdgZTsSpWv1uq1ioRdp5qfHsnd`
+- Source：git；branch 為本隔離施工分支；target=null（非 Production）。
+- 狀態：ERROR；`npm run build` exit 1。
+- 日誌明確顯示缺少 SEWFUNLIFE_SPREADSHEET_ID、GOOGLE_SERVICE_ACCOUNT_EMAIL、GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY，停在 content:sync。
+- [已檢查的 Vercel 建置紀錄](https://vercel.com/whynot-tws-projects/sewfunlife-github-io/4zbdgZTsSpWv1uq1ioRdp5qfHsnd)
+- 這是既有 Git 自動 Preview，不是本輪手動部署；沒有停用整合、改平台設定或提供 fallback。
+- 自動 Preview 的 fail-fast 已獲遠端證據，但仍不等於成功 live sync／部署驗收。
+- 證據保存於 `docs/evidence/WORK-2.7E-01_vercel.json`，屬提交後新增的報告證據；不含憑證值。

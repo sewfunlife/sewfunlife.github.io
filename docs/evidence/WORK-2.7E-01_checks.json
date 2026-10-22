@@ -45,5 +45,11 @@
     "authorization": "User explicitly approved in this conversation"
   },
   "browser_qa": "NOT VERIFIED: missing Chromium executable; download failed",
-  "deployment": "NOT EXECUTED"
+  "deployment": "No manual or production release; existing Vercel Git integration attempted Preview and failed at sync",
+  "automatic_vercel_preview": {
+    "observed_commit": "a494db2de9f9d02ff4c4143985fd395e6d6f79f7",
+    "state": "ERROR",
+    "reason": "Missing all three named build-time secrets",
+    "production": false
+  }
 }
